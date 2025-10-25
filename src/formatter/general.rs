@@ -38,8 +38,15 @@ pub fn format_general(buffer: &mut String, value: f64, _part: &Section, locale: 
     let int = value.trunc() as i64;
 
     if (value - int as f64).abs() < f64::EPSILON {
-        buffer.push_str(&int.abs().to_string());
-        return;
+        let mut abs_int = int as i128;
+        if abs_int < 0 {
+            abs_int = -abs_int;
+        }
+        let digits = abs_int.to_string();
+        if digits.len() <= 11 {
+            buffer.push_str(&digits);
+            return;
+        }
     }
 
     let v = value.abs();

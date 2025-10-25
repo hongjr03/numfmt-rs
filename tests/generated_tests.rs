@@ -130,7 +130,7 @@ fn parse_options(options_json: Option<&JsonValue>) -> FormatterOptions {
                 JsonValue::String(s) => options.locale = s.clone(),
                 JsonValue::Number(n) => {
                     if let Some(code) = n.as_u64() {
-                        options.locale = format!("{:04X}", { (code & 0xffff) });
+                        options.locale = format!("{:04X}", { code & 0xffff });
                     }
                 }
                 _ => {}

@@ -89,7 +89,6 @@ pub fn run_part(
     let mut fraction = String::new();
     let mut integer = String::new();
     let mut exponent = 0i32;
-
     let mut date = numeric_value.map(|n| n.trunc()).unwrap_or(0.0);
     let mut time = 0.0;
     let mut year = 0i32;
@@ -132,18 +131,40 @@ pub fn run_part(
             let rounded = round(num, if part.fractions { 1 } else { part.frac_max });
             let abs_rounded = rounded.abs();
             if abs_rounded >= 1.0 {
-                integer = (abs_rounded.floor() as i128).to_string();
+                integer = abs_rounded.floor().to_string();
             }
         }
     }
 
-    if part.dec_fractions {
+    let frac_full = part.frac_pattern.join("");
+
+    if part.dec_fractions && part.frac_max > 0 {
         if let Some(num) = numeric_value {
             let rounded = round(num, part.frac_max);
             let repr = rounded.to_string();
             if let Some(idx) = repr.find('.') {
                 let frac_part = &repr[idx + 1..];
                 fraction = frac_part.to_string();
+                let mut frac_chars: Vec<char> = fraction.chars().collect();
+                let pattern_chars: Vec<char> = frac_full.chars().collect();
+                let mut pattern_idx = pattern_chars.len();
+                let mut digit_idx = frac_chars.len();
+                while pattern_idx > 0 && digit_idx > 0 {
+                    pattern_idx -= 1;
+                    let placeholder = pattern_chars[pattern_idx];
+                    let current_digit = digit_idx - 1;
+                    if (placeholder == '#' || placeholder == '?')
+                        && frac_chars.get(current_digit) == Some(&'0')
+                        && frac_chars.len() > part.frac_min
+                        && current_digit + 1 == frac_chars.len()
+                    {
+                        frac_chars.pop();
+                        digit_idx -= 1;
+                        continue;
+                    }
+                    digit_idx -= 1;
+                }
+                fraction = frac_chars.into_iter().collect();
             }
         }
     }
@@ -172,7 +193,7 @@ pub fn run_part(
                         have_fraction = fixed_slash;
                     }
                 } else {
-                    let (num_val, den_val) = dec2frac(fractional, None, part.den_max);
+                    let (num_val, den_val) = dec2frac(fractional, None, Some(part.den_max));
                     numerator = num_val.to_string();
                     denominator = den_val.to_string();
                     if part.integer && numerator == "0" {
@@ -285,9 +306,23 @@ pub fn run_part(
     let numerator_chars: Vec<char> = numerator.chars().collect();
     let denominator_chars: Vec<char> = denominator.chars().collect();
 
-    let frac_full = part.frac_pattern.join("");
+    let negative_value = numeric_value.map_or(false, |n| n.is_sign_negative());
+    let has_integer_digit = integer_chars.iter().any(|c| *c != '0');
+    let has_fraction_digit = fraction_chars.iter().any(|c| *c != '0');
+    let has_numerator_digit = numerator_chars.iter().any(|c| *c != '0')
+        || (part.fractions && numeric_value.map_or(false, |n| n != 0.0));
+    let uses_general = part.tokens.iter().any(|tok| {
+        matches!(
+            tok,
+            SectionToken::Token(token) if token.kind == TokenKind::General
+        )
+    });
+    let general_has_value = uses_general && numeric_value.map(|n| n != 0.0).unwrap_or(false);
+    let has_value_digits =
+        has_integer_digit || has_fraction_digit || has_numerator_digit || general_has_value;
+    let show_negative_sign = negative_value && has_value_digits;
 
-    for token in &part.tokens {
+    for (idx, token) in part.tokens.iter().enumerate() {
         match token {
             SectionToken::String(tok) => {
                 let value = match tok.rule {
@@ -323,7 +358,11 @@ pub fn run_part(
                 output.push_str(&value);
             }
             SectionToken::Token(tok) => match tok.kind {
-                TokenKind::Space => output.push_str(pad_q),
+                TokenKind::Space => {
+                    if !should_skip_fraction_space(part, have_fraction, idx) {
+                        output.push_str(pad_q);
+                    }
+                }
                 TokenKind::Error => output.push_str(&opts.invalid),
                 TokenKind::Point => {
                     if part.date.is_empty() {
@@ -342,13 +381,13 @@ pub fn run_part(
                 TokenKind::Minus => {
                     if tok.volatile && !part.date.is_empty() {
                         // no-op
-                    } else if tok.volatile && (numeric_value.unwrap_or(0.0) >= 0.0) {
-                        // skip volatile minus for positive numbers
+                    } else if tok.volatile && numeric_value.map_or(true, |n| n >= 0.0) {
+                        // skip volatile minus for non-negative numeric values or non-numeric inputs
                     } else if tok.volatile
                         && !part.fractions
                         && (part.integer || part.dec_fractions)
                     {
-                        if numeric_value.unwrap_or(0.0) < 0.0
+                        if show_negative_sign
                             && ((!integer.is_empty() && integer != "0") || !fraction.is_empty())
                         {
                             output.push_str(&locale.negative);
@@ -366,14 +405,14 @@ pub fn run_part(
                     }
                 }
                 TokenKind::Fill => {
-                    if let Some(fill) = opts.fill_char {
-                        output.push(fill);
+                    if let Some(fill) = &opts.fill_char {
+                        output.push_str(fill);
                         output.push_str(&token_raw(tok));
                     }
                 }
                 TokenKind::Skip => {
-                    if let Some(skip) = opts.skip_char {
-                        output.push(skip);
+                    if let Some(skip) = &opts.skip_char {
+                        output.push_str(skip);
                         output.push_str(&token_raw(tok));
                     } else {
                         output.push_str(if opts.nbsp { "\u{00A0}" } else { " " });
@@ -415,7 +454,11 @@ pub fn run_part(
             SectionToken::Div => {
                 if have_fraction {
                     output.push('/');
-                } else if part.num_min > 0 || part.den_min > 0 {
+                } else if part.num_min > 0
+                    || part.den_min > 0
+                    || part.num_p.contains('?')
+                    || part.den_p.contains('?')
+                {
                     output.push_str(pad_q);
                 } else {
                     output.push_str(pad('#', opts.nbsp));
@@ -429,7 +472,7 @@ pub fn run_part(
                     if part.int_pattern.len() == 1 {
                         let pt_chars: Vec<char> = part.int_p.chars().collect();
                         let pt_len = pt_chars.len();
-                        let l = usize::max(part.int_min, integer_chars.len());
+                        let l = usize::max(pt_len.max(part.int_min), integer_chars.len());
                         let mut digits_str = String::new();
 
                         for i in (1..=l).rev() {
@@ -462,7 +505,7 @@ pub fn run_part(
                                         if group_sec > 0 && n % group_sec == 0 {
                                             if digit.is_some() || placeholder == Some('0') {
                                                 separator.push_str(&locale.group);
-                                            } else {
+                                            } else if placeholder == Some('?') {
                                                 separator.push_str(pad('?', opts.nbsp));
                                             }
                                         }
@@ -484,6 +527,7 @@ pub fn run_part(
                             pattern,
                             counter_int,
                             opts.nbsp,
+                            false,
                         );
                     }
                 }
@@ -495,6 +539,7 @@ pub fn run_part(
                         pattern,
                         counter_frac,
                         opts.nbsp,
+                        true,
                     );
                 }
                 NumberPart::Mantissa => {
@@ -508,6 +553,7 @@ pub fn run_part(
                         pattern,
                         counter_man,
                         opts.nbsp,
+                        false,
                     );
                 }
                 NumberPart::Numerator => {
@@ -518,6 +564,7 @@ pub fn run_part(
                         pattern,
                         counter_num,
                         opts.nbsp,
+                        false,
                     );
                 }
                 NumberPart::Denominator => {
@@ -557,6 +604,51 @@ pub fn run_part(
     Ok(output)
 }
 
+fn should_skip_fraction_space(part: &Section, have_fraction: bool, idx: usize) -> bool {
+    if !part.fractions || have_fraction {
+        return false;
+    }
+    let requires_padding = part.num_min > 0
+        || part.den_min > 0
+        || part.num_p.contains('?')
+        || part.den_p.contains('?');
+    if requires_padding {
+        return false;
+    }
+    space_adjacent_to_fraction(&part.tokens, idx)
+}
+
+fn space_adjacent_to_fraction(tokens: &[SectionToken], idx: usize) -> bool {
+    let prev = tokens
+        .get(..idx)
+        .and_then(|slice| slice.iter().rfind(|tok| !token_is_space(tok)));
+    if prev.map_or(false, is_fraction_component) {
+        return true;
+    }
+    let next = tokens
+        .get(idx + 1..)
+        .and_then(|slice| slice.iter().find(|tok| !token_is_space(tok)));
+    next.map_or(false, is_fraction_component)
+}
+
+fn token_is_space(token: &SectionToken) -> bool {
+    matches!(token, SectionToken::Token(tok) if tok.kind == TokenKind::Space)
+}
+
+fn is_fraction_component(token: &SectionToken) -> bool {
+    match token {
+        SectionToken::Number(num) => {
+            matches!(num.part, NumberPart::Numerator | NumberPart::Denominator)
+        }
+        SectionToken::Div => true,
+        SectionToken::String(tok) => matches!(
+            tok.rule,
+            Some(StringRule::Num | StringRule::NumPlusInt | StringRule::Den)
+        ),
+        _ => false,
+    }
+}
+
 fn token_raw(token: &Token) -> String {
     match &token.value {
         crate::parser::model::TokenValue::Text(text) => text.clone(),
@@ -572,6 +664,7 @@ fn append_digit_sequence(
     chunk_pattern: &str,
     offset: usize,
     nbsp: bool,
+    align_left: bool,
 ) -> usize {
     let chunk_chars: Vec<char> = chunk_pattern.chars().collect();
     let full_len = full_pattern.chars().count();
@@ -585,8 +678,8 @@ fn append_digit_sequence(
     };
 
     let mut local_offset = offset as isize;
-    if digits_len < chunk_len {
-        local_offset += digits_len as isize - chunk_len as isize;
+    if !align_left && digits_len < full_len {
+        local_offset += digits_len as isize - full_len as isize;
     }
 
     for i in 0..length {
@@ -667,6 +760,7 @@ fn append_date_token(
             let y = year % 100;
             output.push_str(&format!("{:02}", y.abs()));
         }
+        DateTokenKind::Era => {}
         DateTokenKind::BuddhistYear => {
             output.push_str(&(year + 543).to_string());
         }
@@ -763,7 +857,7 @@ fn append_date_token(
             if numeric_value < 0.0 {
                 output.push_str(&locale.negative);
             }
-            let hh = (date * 24.0) + (time / 3600.0).floor();
+            let hh = (date * 24.0) + (time / 3600.0).trunc();
             output.push_str(&format!(
                 "{:0width$}",
                 hh.abs() as i64,

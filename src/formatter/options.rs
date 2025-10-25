@@ -13,8 +13,8 @@ pub struct FormatterOptions {
     pub ignore_timezone: bool,
     pub grouping: Vec<u8>,
     pub index_colors: bool,
-    pub skip_char: Option<char>,
-    pub fill_char: Option<char>,
+    pub skip_char: Option<String>,
+    pub fill_char: Option<String>,
 }
 
 impl Default for FormatterOptions {
@@ -58,12 +58,12 @@ impl FormatterOptions {
         self
     }
 
-    pub fn with_skip_char(mut self, ch: Option<char>) -> Self {
+    pub fn with_skip_char(mut self, ch: Option<String>) -> Self {
         self.skip_char = ch;
         self
     }
 
-    pub fn with_fill_char(mut self, ch: Option<char>) -> Self {
+    pub fn with_fill_char(mut self, ch: Option<String>) -> Self {
         self.fill_char = ch;
         self
     }

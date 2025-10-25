@@ -38,7 +38,8 @@ pub fn get_exponent(num: f64, int_max: usize) -> i32 {
     let exp = num.log10().floor() as i32;
     if int_max > 1 {
         let step = int_max as i32;
-        (exp / step) * step
+        let adjusted = (exp as f64 / step as f64).floor() as i32;
+        adjusted * step
     } else {
         exp
     }
@@ -58,89 +59,49 @@ const PRECISION: f64 = 1e-13;
 
 pub fn dec2frac(
     number: f64,
-    numerator_max_digits: Option<usize>,
-    denominator_max_digits: usize,
+    // infinity
+    _numerator_max_digits: Option<usize>,
+    denominator_max_digits: Option<usize>,
 ) -> (i64, i64) {
-    let sign = if number < 0.0 { -1 } else { 1 };
-    let maxdigits_n = numerator_max_digits
-        .map(|n| 10_f64.powi(n.max(1) as i32))
-        .unwrap_or(f64::INFINITY);
-    let maxdigits_d = 10_f64.powi((denominator_max_digits.max(1)) as i32);
+    if number.is_nan() || number.is_infinite() {
+        return (0, 1);
+    }
 
-    let mut z = number.abs();
-    let mut last_d = 0.0;
-    let mut curr_n = 0.0;
-    let mut curr_d = 1.0;
+    let sign = if number < 0.0 { -1 } else { 1 };
+    let number = number.abs();
+
+    let maxdigits_d = 10_f64.powi(denominator_max_digits.unwrap_or(2) as i32);
 
     if number.fract() == 0.0 {
         return ((number * sign as f64) as i64, 1);
-    }
-    if number.abs() < 1e-19 {
+    } else if number < 1e-19 {
         return (sign, 1e19 as i64);
-    }
-    if number.abs() > 1e19 {
+    } else if number > 1e19 {
         return ((1e19 * sign as f64) as i64, 1);
     }
+
+    let mut z = number;
+    let mut last_d = 0_f64;
+    let mut last_n;
+    let mut curr_n = 0_f64;
+    let mut curr_d = 1_f64;
 
     loop {
         let floor_z = z.floor();
         z = 1.0 / (z - floor_z);
 
-        let prev_d = curr_d;
-        let prev_n = curr_n;
+        let tmp_d = curr_d;
+        curr_d = curr_d * z.floor() + last_d;
+        last_d = tmp_d;
 
-        curr_d = (curr_d * floor_z) + last_d;
-        last_d = prev_d;
-        curr_n = (number.abs() * curr_d + 0.5).floor();
+        last_n = curr_n;
+        curr_n = (number * curr_d + 0.5).floor();
 
-        if curr_n >= maxdigits_n || curr_d >= maxdigits_d {
-            let max_den = (maxdigits_d - 1.0).floor() as i64;
-            let max_num_limit = if maxdigits_n.is_finite() {
-                (maxdigits_n - 1.0).floor() as i64
-            } else {
-                i64::MAX
-            };
-            let target = number.abs();
-
-            let mut best_n = if prev_d != 0.0 {
-                prev_n.round() as i64
-            } else {
-                0
-            };
-            let mut best_d = if prev_d != 0.0 {
-                prev_d.round() as i64
-            } else {
-                1
-            };
-            let mut best_diff = if prev_d != 0.0 {
-                (target - (best_n as f64 / best_d as f64)).abs()
-            } else {
-                f64::INFINITY
-            };
-
-            for d in 1..=max_den.max(1) {
-                let n = (target * d as f64).round() as i64;
-                if max_num_limit != i64::MAX && n > max_num_limit {
-                    continue;
-                }
-                let diff = (target - (n as f64 / d as f64)).abs();
-                if diff + PRECISION < best_diff
-                    || ((diff - best_diff).abs() < PRECISION && d < best_d)
-                {
-                    best_diff = diff;
-                    best_n = n;
-                    best_d = d;
-                }
-            }
-
-            if best_d <= 0 {
-                best_d = 1;
-            }
-
-            return ((sign * best_n) as i64, best_d);
+        if curr_d >= maxdigits_d {
+            return ((sign as f64 * last_n).round() as i64, last_d.round() as i64);
         }
 
-        if (number.abs() - (curr_n / curr_d)).abs() < PRECISION || z == z.floor() {
+        if (number - curr_n / curr_d).abs() < PRECISION || z == z.floor() {
             break;
         }
     }

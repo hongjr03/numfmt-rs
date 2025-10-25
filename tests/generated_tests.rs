@@ -122,6 +122,9 @@ fn parse_options(options_json: Option<&JsonValue>) -> FormatterOptions {
         if let Some(JsonValue::String(s)) = obj.get("invalid") {
             options.invalid = s.clone();
         }
+        if let Some(JsonValue::Bool(b)) = obj.get("invalid") {
+            options.invalid = b.to_string();
+        }
         if let Some(locale_value) = obj.get("locale") {
             match locale_value {
                 JsonValue::String(s) => options.locale = s.clone(),
@@ -132,6 +135,25 @@ fn parse_options(options_json: Option<&JsonValue>) -> FormatterOptions {
                 }
                 _ => {}
             }
+        }
+        if let Some(JsonValue::Array(arr)) = obj.get("grouping") {
+            let mut grouping = Vec::new();
+            for value in arr {
+                if let Some(num) = value.as_u64() {
+                    if num > 0 && num <= u8::MAX as u64 {
+                        grouping.push(num as u8);
+                    }
+                }
+            }
+            if !grouping.is_empty() {
+                options.grouping = grouping;
+            }
+        }
+        if let Some(JsonValue::String(s)) = obj.get("skipChar") {
+            options.skip_char = Some(s.clone());
+        }
+        if let Some(JsonValue::String(s)) = obj.get("fillChar") {
+            options.fill_char = Some(s.clone());
         }
     }
 

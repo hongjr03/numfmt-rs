@@ -506,7 +506,7 @@ pub fn run_part(
                                 && base >= group_pri
                             {
                                 let n = base - group_pri;
-                                if group_sec > 0 && n % group_sec == 0 {
+                                if group_sec > 0 && n.is_multiple_of(group_sec) {
                                     if digit.is_some() || placeholder == Some('0') {
                                         separator.push_str(&locale.group);
                                     } else if placeholder == Some('?') {

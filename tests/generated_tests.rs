@@ -1,8 +1,24 @@
 use num_bigint::BigInt;
-use numfmt_rs::{FormatterOptions, format, format_with_options};
+use numfmt_rs::{FormatterOptions, LocaleSettings, add_locale, format, format_with_options};
 use serde::Deserialize;
 use serde_json::Value as JsonValue;
 use std::str::FromStr;
+use std::sync::Once;
+
+fn ensure_test_locales() {
+    static INIT: Once = Once::new();
+    INIT.call_once(|| {
+        let settings = LocaleSettings {
+            decimal: Some("·".to_string()),
+            positive: Some("ᐩ".to_string()),
+            negative: Some("÷".to_string()),
+            percent: Some("٪".to_string()),
+            exponent: Some("X".to_string()),
+            ..Default::default()
+        };
+        let _ = add_locale(settings, "xx");
+    });
+}
 
 #[derive(Debug, Deserialize)]
 struct TestCase {
@@ -25,7 +41,10 @@ fn load_test_cases(file_name: &str) -> Vec<TestCase> {
         .unwrap_or_else(|e| panic!("Failed to parse test file {}: {}", path, e))
 }
 
-fn convert_json_value(value: &'_ JsonValue) -> numfmt_rs::FormatValue<'_> {
+fn convert_json_value<'a>(
+    value: &'a JsonValue,
+    expected_hint: Option<&'a str>,
+) -> numfmt_rs::FormatValue<'a> {
     match value {
         JsonValue::Number(n) => {
             if let Some(f) = n.as_f64() {
@@ -38,7 +57,12 @@ fn convert_json_value(value: &'_ JsonValue) -> numfmt_rs::FormatValue<'_> {
         }
         JsonValue::String(s) => numfmt_rs::FormatValue::Text(std::borrow::Cow::Borrowed(s)),
         JsonValue::Bool(b) => numfmt_rs::FormatValue::Boolean(*b),
-        JsonValue::Null => numfmt_rs::FormatValue::Null,
+        JsonValue::Null => match expected_hint {
+            Some("NaN") => numfmt_rs::FormatValue::Number(f64::NAN),
+            Some("∞") => numfmt_rs::FormatValue::Number(f64::INFINITY),
+            Some("-∞") => numfmt_rs::FormatValue::Number(f64::NEG_INFINITY),
+            _ => numfmt_rs::FormatValue::Null,
+        },
         JsonValue::Object(obj) => {
             // Handle special types like BigInt and Date
             if let Some(type_field) = obj.get("type") {
@@ -67,6 +91,7 @@ fn convert_json_value(value: &'_ JsonValue) -> numfmt_rs::FormatValue<'_> {
 }
 
 fn parse_options(options_json: Option<&JsonValue>) -> FormatterOptions {
+    ensure_test_locales();
     let mut options = FormatterOptions::default();
 
     if let Some(JsonValue::Object(obj)) = options_json {
@@ -97,8 +122,16 @@ fn parse_options(options_json: Option<&JsonValue>) -> FormatterOptions {
         if let Some(JsonValue::String(s)) = obj.get("invalid") {
             options.invalid = s.clone();
         }
-        if let Some(JsonValue::String(s)) = obj.get("locale") {
-            options.locale = s.clone();
+        if let Some(locale_value) = obj.get("locale") {
+            match locale_value {
+                JsonValue::String(s) => options.locale = s.clone(),
+                JsonValue::Number(n) => {
+                    if let Some(code) = n.as_u64() {
+                        options.locale = format!("{:04X}", (code & 0xffff) as u64);
+                    }
+                }
+                _ => {}
+            }
         }
     }
 

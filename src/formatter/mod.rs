@@ -21,7 +21,7 @@ mod to_ymd;
 pub mod value;
 
 pub use error::FormatterError;
-pub use locale::default_locale;
+pub use locale::{LocaleError, LocaleSettings, add_locale, default_locale};
 pub use options::FormatterOptions;
 pub use run_part::RunValue;
 pub use value::{DateValue, FormatValue};

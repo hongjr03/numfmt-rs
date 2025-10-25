@@ -1,7 +1,59 @@
 use std::collections::HashMap;
-use std::sync::OnceLock;
+use std::sync::{Mutex, OnceLock};
 
 use serde::Deserialize;
+use thiserror::Error;
+
+#[derive(Debug, Error, Clone, PartialEq, Eq)]
+pub enum LocaleError {
+    #[error("invalid locale tag: {0}")]
+    InvalidTag(String),
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct LocaleSettings {
+    pub group: Option<String>,
+    pub decimal: Option<String>,
+    pub positive: Option<String>,
+    pub negative: Option<String>,
+    pub percent: Option<String>,
+    pub exponent: Option<String>,
+    pub nan: Option<String>,
+    pub infinity: Option<String>,
+    pub ampm: Option<Vec<String>>,
+    pub mmmm6: Option<Vec<String>>,
+    pub mmm6: Option<Vec<String>>,
+    pub mmmm: Option<Vec<String>>,
+    pub mmm: Option<Vec<String>>,
+    pub dddd: Option<Vec<String>>,
+    pub ddd: Option<Vec<String>>,
+    pub bool_values: Option<Vec<String>>,
+    pub prefer_mdy: Option<bool>,
+}
+
+impl LocaleSettings {
+    fn apply(self, base: &Locale) -> Locale {
+        Locale {
+            group: self.group.unwrap_or_else(|| base.group.clone()),
+            decimal: self.decimal.unwrap_or_else(|| base.decimal.clone()),
+            positive: self.positive.unwrap_or_else(|| base.positive.clone()),
+            negative: self.negative.unwrap_or_else(|| base.negative.clone()),
+            percent: self.percent.unwrap_or_else(|| base.percent.clone()),
+            exponent: self.exponent.unwrap_or_else(|| base.exponent.clone()),
+            nan: self.nan.unwrap_or_else(|| base.nan.clone()),
+            infinity: self.infinity.unwrap_or_else(|| base.infinity.clone()),
+            ampm: self.ampm.unwrap_or_else(|| base.ampm.clone()),
+            mmmm6: self.mmmm6.unwrap_or_else(|| base.mmmm6.clone()),
+            mmm6: self.mmm6.unwrap_or_else(|| base.mmm6.clone()),
+            mmmm: self.mmmm.unwrap_or_else(|| base.mmmm.clone()),
+            mmm: self.mmm.unwrap_or_else(|| base.mmm.clone()),
+            dddd: self.dddd.unwrap_or_else(|| base.dddd.clone()),
+            ddd: self.ddd.unwrap_or_else(|| base.ddd.clone()),
+            bool_values: self.bool_values.unwrap_or_else(|| base.bool_values.clone()),
+            prefer_mdy: self.prefer_mdy.unwrap_or(base.prefer_mdy),
+        }
+    }
+}
 
 #[derive(Debug, Clone)]
 pub struct Locale {
@@ -91,15 +143,19 @@ struct LocaleId {
 }
 
 struct LocaleRegistry {
-    default: Locale,
-    locales: HashMap<String, Locale>,
+    default: &'static Locale,
+    locales: HashMap<String, &'static Locale>,
 }
 
-static REGISTRY: OnceLock<LocaleRegistry> = OnceLock::new();
+static REGISTRY: OnceLock<Mutex<LocaleRegistry>> = OnceLock::new();
 static CODE_MAP: OnceLock<HashMap<u32, String>> = OnceLock::new();
 
 pub fn default_locale() -> &'static Locale {
-    &REGISTRY.get_or_init(LocaleRegistry::load).default
+    registry().lock().expect("locale registry poisoned").default
+}
+
+fn registry() -> &'static Mutex<LocaleRegistry> {
+    REGISTRY.get_or_init(|| Mutex::new(LocaleRegistry::load()))
 }
 
 pub fn get_locale(tag: Option<&str>) -> Option<&'static Locale> {
@@ -110,35 +166,22 @@ pub fn get_locale_or_default(tag: Option<&str>) -> &'static Locale {
     get_locale(tag).unwrap_or_else(|| default_locale())
 }
 
+pub fn add_locale(settings: LocaleSettings, tag: impl AsRef<str>) -> Result<(), LocaleError> {
+    let mut registry = registry().lock().expect("locale registry poisoned");
+    registry.add_locale(settings, tag.as_ref())
+}
+
 #[allow(dead_code)]
 pub fn resolve_locale(tag: &str) -> Option<String> {
     resolve_code(tag).or_else(|| parse_locale_tag(tag).map(|id| id.lang))
 }
 
 fn lookup_locale(tag: &str) -> Option<&'static Locale> {
-    let registry = REGISTRY.get_or_init(LocaleRegistry::load);
     if tag.trim().is_empty() {
         return None;
     }
-    if let Some(code) = resolve_code(tag) {
-        if let Some(loc) = registry.locales.get(&code) {
-            return Some(loc);
-        }
-        if let Some(parsed) = parse_locale_tag(&code) {
-            if let Some(loc) = registry.locales.get(&parsed.language) {
-                return Some(loc);
-            }
-        }
-    }
-    if let Some(parsed) = parse_locale_tag(tag) {
-        if let Some(loc) = registry.locales.get(&parsed.lang) {
-            return Some(loc);
-        }
-        if let Some(loc) = registry.locales.get(&parsed.language) {
-            return Some(loc);
-        }
-    }
-    None
+    let registry = registry().lock().expect("locale registry poisoned");
+    registry.lookup(tag)
 }
 
 impl LocaleRegistry {
@@ -146,14 +189,53 @@ impl LocaleRegistry {
         let raw: LocaleFile =
             serde_json::from_str(include_str!("./locales.json")).expect("invalid locale data");
 
-        let default = Locale::from_raw(raw.default);
+        let default = leak_locale(Locale::from_raw(raw.default));
         let mut locales = HashMap::new();
+
         for (key, value) in raw.locales {
             let canonical = canonicalize_key(&key);
-            locales.insert(canonical, Locale::from_raw(value));
+            locales.insert(canonical, leak_locale(Locale::from_raw(value)));
         }
+
         Self { default, locales }
     }
+
+    fn lookup(&self, tag: &str) -> Option<&'static Locale> {
+        if let Some(code) = resolve_code(tag) {
+            if let Some(loc) = self.locales.get(&code) {
+                return Some(*loc);
+            }
+            if let Some(parsed) = parse_locale_tag(&code) {
+                if let Some(loc) = self.locales.get(&parsed.language) {
+                    return Some(*loc);
+                }
+            }
+        }
+        if let Some(parsed) = parse_locale_tag(tag) {
+            if let Some(loc) = self.locales.get(&parsed.lang) {
+                return Some(*loc);
+            }
+            if let Some(loc) = self.locales.get(&parsed.language) {
+                return Some(*loc);
+            }
+        }
+        None
+    }
+
+    fn add_locale(&mut self, settings: LocaleSettings, tag: &str) -> Result<(), LocaleError> {
+        let parsed =
+            parse_locale_tag(tag).ok_or_else(|| LocaleError::InvalidTag(tag.to_string()))?;
+        let locale = leak_locale(settings.apply(self.default));
+        self.locales.insert(parsed.lang.clone(), locale);
+        if parsed.language != parsed.lang && !self.locales.contains_key(&parsed.language) {
+            self.locales.insert(parsed.language.clone(), locale);
+        }
+        Ok(())
+    }
+}
+
+fn leak_locale(locale: Locale) -> &'static Locale {
+    Box::leak(Box::new(locale))
 }
 
 impl Locale {

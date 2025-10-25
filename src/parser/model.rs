@@ -166,6 +166,7 @@ pub enum DateTokenKind {
     YearShort,
     BuddhistYear,
     BuddhistYearShort,
+    Era,
     Month,
     MonthName,
     MonthNameShort,

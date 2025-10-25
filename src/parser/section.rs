@@ -405,6 +405,7 @@ fn handle_datetime_token(
         }
         'g' => {
             dt.unit = DateUnits::empty();
+            dt.kind = DateTokenKind::Era;
         }
         'h' => {
             dt.unit = DateUnits::HOUR;

@@ -16,10 +16,7 @@ fn fix_locale(input: &str, locale: &Locale) -> String {
 fn exponent_string(n: f64, exp: i32, locale: &Locale) -> String {
     let abs_exp = exp.abs();
     let mut out = String::new();
-    let mut mantissa = round(n, 5);
-    if mantissa == 1.0 && n != 1.0 {
-        mantissa = n;
-    }
+    let mantissa = round(n, 5);
     out.push_str(&fix_locale(&mantissa.to_string(), locale));
     out.push_str(&locale.exponent);
     out.push_str(if exp < 0 {
@@ -37,7 +34,7 @@ fn exponent_string(n: f64, exp: i32, locale: &Locale) -> String {
 pub fn format_general(buffer: &mut String, value: f64, _part: &Section, locale: &Locale) {
     let int = value.trunc() as i64;
 
-    if (value - int as f64).abs() < f64::EPSILON {
+    if value == 0.0 || ((value - int as f64).abs() < f64::EPSILON && value.abs() >= 1.0) {
         let mut abs_int = int as i128;
         if abs_int < 0 {
             abs_int = -abs_int;
@@ -60,9 +57,16 @@ pub fn format_general(buffer: &mut String, value: f64, _part: &Section, locale: 
     let num_dig = numdec(v, true);
 
     if (-4..=-1).contains(&exp) {
-        let o = format!("{:.width$}", v, width = (10 + exp) as usize);
-        let trimmed = o.trim_end_matches('0').trim_end_matches('.');
-        buffer.push_str(&fix_locale(trimmed, locale));
+        let mut o = format!("{:.9}", v);
+        if o.contains('.') {
+            while o.ends_with('0') {
+                o.pop();
+            }
+            if o.ends_with('.') {
+                o.pop();
+            }
+        }
+        buffer.push_str(&fix_locale(&o, locale));
     } else if exp == 10 {
         let mut o = format!("{:.10}", v);
         if o.len() > 12 {
@@ -85,11 +89,7 @@ pub fn format_general(buffer: &mut String, value: f64, _part: &Section, locale: 
         } else {
             buffer.push_str(&exponent_string(n, exp, locale));
         }
-    } else if num_dig.total >= 12 {
-        buffer.push_str(&exponent_string(n, exp, locale));
     } else {
-        let o = round(v, 9);
-        let formatted = format!("{o:.prec$}", prec = num_dig.frac);
-        buffer.push_str(&fix_locale(&formatted, locale));
+        buffer.push_str(&exponent_string(n, exp, locale));
     }
 }

@@ -1,0 +1,902 @@
+[
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23457e-13,
+    "expected": "12.3E-14"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23457e-12,
+    "expected": "1.2E-12"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23457e-11,
+    "expected": "12.3E-12"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23457e-10,
+    "expected": "1.2E-10"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23457e-9,
+    "expected": "12.3E-10"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23457e-8,
+    "expected": "1.2E-8"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23457e-7,
+    "expected": "12.3E-8"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 0.00000123457,
+    "expected": "1.2E-6"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 0.0000123457,
+    "expected": "12.3E-6"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 0.000123457,
+    "expected": "1.2E-4"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 0.001234568,
+    "expected": "12.3E-4"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 0.012345679,
+    "expected": "1.2E-2"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 0.123456789,
+    "expected": "12.3E-2"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789,
+    "expected": "1.2E+0"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 12.3456789,
+    "expected": "12.3E+0"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 123.456789,
+    "expected": "1.2E+2"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1234.56789,
+    "expected": "12.3E+2"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 12345.6789,
+    "expected": "1.2E+4"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 123456.789,
+    "expected": "12.3E+4"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1234567.89,
+    "expected": "1.2E+6"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 12345678.9,
+    "expected": "12.3E+6"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 123456789,
+    "expected": "1.2E+8"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1234567890,
+    "expected": "12.3E+8"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 12345678900,
+    "expected": "1.2E+10"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 123456789000,
+    "expected": "12.3E+10"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1234567890000,
+    "expected": "1.2E+12"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 12345678900000,
+    "expected": "12.3E+12"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 123456789000000,
+    "expected": "1.2E+14"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1234567890000000,
+    "expected": "12.3E+14"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 12345678900000000,
+    "expected": "1.2E+16"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 123456789000000000,
+    "expected": "12.3E+16"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1234567890000000000,
+    "expected": "1.2E+18"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 12345678900000000000,
+    "expected": "12.3E+18"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 123456789000000000000,
+    "expected": "1.2E+20"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+21,
+    "expected": "12.3E+20"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+22,
+    "expected": "1.2E+22"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+23,
+    "expected": "12.3E+22"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+24,
+    "expected": "1.2E+24"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+25,
+    "expected": "12.3E+24"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+26,
+    "expected": "1.2E+26"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+27,
+    "expected": "12.3E+26"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+28,
+    "expected": "1.2E+28"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+29,
+    "expected": "12.3E+28"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+30,
+    "expected": "1.2E+30"
+  },
+  {
+    "pattern": "#0.0E+0",
+    "value": 1.23456789e+31,
+    "expected": "12.3E+30"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23457e-13,
+    "expected": "123.5E-15"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23457e-12,
+    "expected": "1.2E-12"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23457e-11,
+    "expected": "12.3E-12"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23457e-10,
+    "expected": "123.5E-12"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23457e-9,
+    "expected": "1.2E-9"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23457e-8,
+    "expected": "12.3E-9"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23457e-7,
+    "expected": "123.5E-9"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 0.00000123457,
+    "expected": "1.2E-6"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 0.0000123457,
+    "expected": "12.3E-6"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 0.000123457,
+    "expected": "123.5E-6"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 0.001234568,
+    "expected": "1.2E-3"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 0.012345679,
+    "expected": "12.3E-3"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 0.123456789,
+    "expected": "123.5E-3"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789,
+    "expected": "1.2E+0"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 12.3456789,
+    "expected": "12.3E+0"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 123.456789,
+    "expected": "123.5E+0"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1234.56789,
+    "expected": "1.2E+3"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 12345.6789,
+    "expected": "12.3E+3"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 123456.789,
+    "expected": "123.5E+3"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1234567.89,
+    "expected": "1.2E+6"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 12345678.9,
+    "expected": "12.3E+6"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 123456789,
+    "expected": "123.5E+6"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1234567890,
+    "expected": "1.2E+9"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 12345678900,
+    "expected": "12.3E+9"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 123456789000,
+    "expected": "123.5E+9"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1234567890000,
+    "expected": "1.2E+12"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 12345678900000,
+    "expected": "12.3E+12"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 123456789000000,
+    "expected": "123.5E+12"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1234567890000000,
+    "expected": "1.2E+15"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 12345678900000000,
+    "expected": "12.3E+15"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 123456789000000000,
+    "expected": "123.5E+15"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1234567890000000000,
+    "expected": "1.2E+18"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 12345678900000000000,
+    "expected": "12.3E+18"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 123456789000000000000,
+    "expected": "123.5E+18"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+21,
+    "expected": "1.2E+21"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+22,
+    "expected": "12.3E+21"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+23,
+    "expected": "123.5E+21"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+24,
+    "expected": "1.2E+24"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+25,
+    "expected": "12.3E+24"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+26,
+    "expected": "123.5E+24"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+27,
+    "expected": "1.2E+27"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+28,
+    "expected": "12.3E+27"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+29,
+    "expected": "123.5E+27"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+30,
+    "expected": "1.2E+30"
+  },
+  {
+    "pattern": "##0.0E+0",
+    "value": 1.23456789e+31,
+    "expected": "12.3E+30"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23457e-13,
+    "expected": "1234.6E-16"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23457e-12,
+    "expected": "1.2E-12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23457e-11,
+    "expected": "12.3E-12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23457e-10,
+    "expected": "123.5E-12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23457e-9,
+    "expected": "1234.6E-12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23457e-8,
+    "expected": "1.2E-8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23457e-7,
+    "expected": "12.3E-8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 0.00000123457,
+    "expected": "123.5E-8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 0.0000123457,
+    "expected": "1234.6E-8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 0.000123457,
+    "expected": "1.2E-4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 0.001234568,
+    "expected": "12.3E-4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 0.012345679,
+    "expected": "123.5E-4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 0.123456789,
+    "expected": "1234.6E-4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789,
+    "expected": "1.2E+0"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 12.3456789,
+    "expected": "12.3E+0"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 123.456789,
+    "expected": "123.5E+0"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1234.56789,
+    "expected": "1234.6E+0"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 12345.6789,
+    "expected": "1.2E+4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 123456.789,
+    "expected": "12.3E+4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1234567.89,
+    "expected": "123.5E+4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 12345678.9,
+    "expected": "1234.6E+4"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 123456789,
+    "expected": "1.2E+8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1234567890,
+    "expected": "12.3E+8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 12345678900,
+    "expected": "123.5E+8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 123456789000,
+    "expected": "1234.6E+8"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1234567890000,
+    "expected": "1.2E+12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 12345678900000,
+    "expected": "12.3E+12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 123456789000000,
+    "expected": "123.5E+12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1234567890000000,
+    "expected": "1234.6E+12"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 12345678900000000,
+    "expected": "1.2E+16"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 123456789000000000,
+    "expected": "12.3E+16"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1234567890000000000,
+    "expected": "123.5E+16"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 12345678900000000000,
+    "expected": "1234.6E+16"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 123456789000000000000,
+    "expected": "1.2E+20"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+21,
+    "expected": "12.3E+20"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+22,
+    "expected": "123.5E+20"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+23,
+    "expected": "1234.6E+20"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+24,
+    "expected": "1.2E+24"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+25,
+    "expected": "12.3E+24"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+26,
+    "expected": "123.5E+24"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+27,
+    "expected": "1234.6E+24"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+28,
+    "expected": "1.2E+28"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+29,
+    "expected": "12.3E+28"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+30,
+    "expected": "123.5E+28"
+  },
+  {
+    "pattern": "###0.0E+0",
+    "value": 1.23456789e+31,
+    "expected": "1234.6E+28"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23457e-13,
+    "expected": "123.5E-15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23457e-12,
+    "expected": "1234.6E-15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23457e-11,
+    "expected": "12345.7E-15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23457e-10,
+    "expected": "1.2E-10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23457e-9,
+    "expected": "12.3E-10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23457e-8,
+    "expected": "123.5E-10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23457e-7,
+    "expected": "1234.6E-10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 0.00000123457,
+    "expected": "12345.7E-10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 0.0000123457,
+    "expected": "1.2E-5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 0.000123457,
+    "expected": "12.3E-5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 0.001234568,
+    "expected": "123.5E-5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 0.012345679,
+    "expected": "1234.6E-5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 0.123456789,
+    "expected": "12345.7E-5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789,
+    "expected": "1.2E+0"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 12.3456789,
+    "expected": "12.3E+0"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 123.456789,
+    "expected": "123.5E+0"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1234.56789,
+    "expected": "1234.6E+0"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 12345.6789,
+    "expected": "12345.7E+0"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 123456.789,
+    "expected": "1.2E+5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1234567.89,
+    "expected": "12.3E+5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 12345678.9,
+    "expected": "123.5E+5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 123456789,
+    "expected": "1234.6E+5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1234567890,
+    "expected": "12345.7E+5"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 12345678900,
+    "expected": "1.2E+10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 123456789000,
+    "expected": "12.3E+10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1234567890000,
+    "expected": "123.5E+10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 12345678900000,
+    "expected": "1234.6E+10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 123456789000000,
+    "expected": "12345.7E+10"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1234567890000000,
+    "expected": "1.2E+15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 12345678900000000,
+    "expected": "12.3E+15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 123456789000000000,
+    "expected": "123.5E+15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1234567890000000000,
+    "expected": "1234.6E+15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 12345678900000000000,
+    "expected": "12345.7E+15"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 123456789000000000000,
+    "expected": "1.2E+20"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+21,
+    "expected": "12.3E+20"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+22,
+    "expected": "123.5E+20"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+23,
+    "expected": "1234.6E+20"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+24,
+    "expected": "12345.7E+20"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+25,
+    "expected": "1.2E+25"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+26,
+    "expected": "12.3E+25"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+27,
+    "expected": "123.5E+25"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+28,
+    "expected": "1234.6E+25"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+29,
+    "expected": "12345.7E+25"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+30,
+    "expected": "1.2E+30"
+  },
+  {
+    "pattern": "####0.0E+0",
+    "value": 1.23456789e+31,
+    "expected": "12.3E+30"
+  }
+]

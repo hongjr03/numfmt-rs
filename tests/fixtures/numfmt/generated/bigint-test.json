@@ -1,0 +1,114 @@
+[
+  {
+    "pattern": "0",
+    "value": 9007199254740991,
+    "expected": "9007199254740991"
+  },
+  {
+    "pattern": "0",
+    "value": {
+      "type": "BigInt",
+      "value": "10"
+    },
+    "expected": "10"
+  },
+  {
+    "pattern": "General",
+    "value": {
+      "type": "BigInt",
+      "value": "10"
+    },
+    "expected": "10"
+  },
+  {
+    "pattern": "General",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254740991"
+    },
+    "expected": "9.0072E+15"
+  },
+  {
+    "pattern": "0.0",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254740991"
+    },
+    "expected": "9007199254740990.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254740991"
+    },
+    "expected": "9,007,199,254,740,990.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254750000"
+    },
+    "expected": "######"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": {
+      "type": "BigInt",
+      "value": "-9007199254750000"
+    },
+    "expected": "######"
+  },
+  {
+    "pattern": "#0-000-00",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254750000"
+    },
+    "expected": "######"
+  },
+  {
+    "pattern": "0%",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254750000"
+    },
+    "expected": "######"
+  },
+  {
+    "pattern": "#0-000-00",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254750000"
+    },
+    "expected": "9007199254750000",
+    "options": {
+      "bigintErrorNumber": true
+    }
+  },
+  {
+    "pattern": "0%",
+    "value": {
+      "type": "BigInt",
+      "value": "9007199254750000"
+    },
+    "expected": "9007199254750000",
+    "options": {
+      "bigintErrorNumber": true
+    }
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 999990000,
+    "expected": "1.000E+09"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": {
+      "type": "BigInt",
+      "value": "999990000"
+    },
+    "expected": "1.000E+09"
+  }
+]

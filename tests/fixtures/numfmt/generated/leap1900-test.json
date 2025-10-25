@@ -1,0 +1,994 @@
+[
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 61,
+    "expected": "1900-03-01",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 60,
+    "expected": "1900-02-29",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 59,
+    "expected": "1900-02-28",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 58,
+    "expected": "1900-02-27",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 57,
+    "expected": "1900-02-26",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 56,
+    "expected": "1900-02-25",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 55,
+    "expected": "1900-02-24",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 54,
+    "expected": "1900-02-23",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 53,
+    "expected": "1900-02-22",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 52,
+    "expected": "1900-02-21",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 51,
+    "expected": "1900-02-20",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 50,
+    "expected": "1900-02-19",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 49,
+    "expected": "1900-02-18",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 48,
+    "expected": "1900-02-17",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 47,
+    "expected": "1900-02-16",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 46,
+    "expected": "1900-02-15",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 45,
+    "expected": "1900-02-14",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 44,
+    "expected": "1900-02-13",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 43,
+    "expected": "1900-02-12",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 42,
+    "expected": "1900-02-11",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 41,
+    "expected": "1900-02-10",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 40,
+    "expected": "1900-02-09",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 39,
+    "expected": "1900-02-08",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 38,
+    "expected": "1900-02-07",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 37,
+    "expected": "1900-02-06",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 36,
+    "expected": "1900-02-05",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 35,
+    "expected": "1900-02-04",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 34,
+    "expected": "1900-02-03",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 33,
+    "expected": "1900-02-02",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 32,
+    "expected": "1900-02-01",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 31,
+    "expected": "1900-01-31",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 30,
+    "expected": "1900-01-30",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 29,
+    "expected": "1900-01-29",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 28,
+    "expected": "1900-01-28",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 27,
+    "expected": "1900-01-27",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 26,
+    "expected": "1900-01-26",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 25,
+    "expected": "1900-01-25",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 24,
+    "expected": "1900-01-24",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 23,
+    "expected": "1900-01-23",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 22,
+    "expected": "1900-01-22",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 21,
+    "expected": "1900-01-21",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 20,
+    "expected": "1900-01-20",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 19,
+    "expected": "1900-01-19",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 18,
+    "expected": "1900-01-18",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 17,
+    "expected": "1900-01-17",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 16,
+    "expected": "1900-01-16",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 15,
+    "expected": "1900-01-15",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 14,
+    "expected": "1900-01-14",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 13,
+    "expected": "1900-01-13",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 12,
+    "expected": "1900-01-12",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 11,
+    "expected": "1900-01-11",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 10,
+    "expected": "1900-01-10",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 9,
+    "expected": "1900-01-09",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 8,
+    "expected": "1900-01-08",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 7,
+    "expected": "1900-01-07",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 6,
+    "expected": "1900-01-06",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 5,
+    "expected": "1900-01-05",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 4,
+    "expected": "1900-01-04",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 3,
+    "expected": "1900-01-03",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 2,
+    "expected": "1900-01-02",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 1,
+    "expected": "1900-01-01",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 0,
+    "expected": "1900-01-00",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 61,
+    "expected": "1900-03-01",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 60,
+    "expected": "1900-02-28",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 59,
+    "expected": "1900-02-27",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 58,
+    "expected": "1900-02-26",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 57,
+    "expected": "1900-02-25",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 56,
+    "expected": "1900-02-24",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 55,
+    "expected": "1900-02-23",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 54,
+    "expected": "1900-02-22",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 53,
+    "expected": "1900-02-21",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 52,
+    "expected": "1900-02-20",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 51,
+    "expected": "1900-02-19",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 50,
+    "expected": "1900-02-18",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 49,
+    "expected": "1900-02-17",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 48,
+    "expected": "1900-02-16",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 47,
+    "expected": "1900-02-15",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 46,
+    "expected": "1900-02-14",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 45,
+    "expected": "1900-02-13",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 44,
+    "expected": "1900-02-12",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 43,
+    "expected": "1900-02-11",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 42,
+    "expected": "1900-02-10",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 41,
+    "expected": "1900-02-09",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 40,
+    "expected": "1900-02-08",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 39,
+    "expected": "1900-02-07",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 38,
+    "expected": "1900-02-06",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 37,
+    "expected": "1900-02-05",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 36,
+    "expected": "1900-02-04",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 35,
+    "expected": "1900-02-03",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 34,
+    "expected": "1900-02-02",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 33,
+    "expected": "1900-02-01",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 32,
+    "expected": "1900-01-31",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 31,
+    "expected": "1900-01-30",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 30,
+    "expected": "1900-01-29",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 29,
+    "expected": "1900-01-28",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 28,
+    "expected": "1900-01-27",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 27,
+    "expected": "1900-01-26",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 26,
+    "expected": "1900-01-25",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 25,
+    "expected": "1900-01-24",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 24,
+    "expected": "1900-01-23",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 23,
+    "expected": "1900-01-22",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 22,
+    "expected": "1900-01-21",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 21,
+    "expected": "1900-01-20",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 20,
+    "expected": "1900-01-19",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 19,
+    "expected": "1900-01-18",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 18,
+    "expected": "1900-01-17",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 17,
+    "expected": "1900-01-16",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 16,
+    "expected": "1900-01-15",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 15,
+    "expected": "1900-01-14",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 14,
+    "expected": "1900-01-13",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 13,
+    "expected": "1900-01-12",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 12,
+    "expected": "1900-01-11",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 11,
+    "expected": "1900-01-10",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 10,
+    "expected": "1900-01-09",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 9,
+    "expected": "1900-01-08",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 8,
+    "expected": "1900-01-07",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 7,
+    "expected": "1900-01-06",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 6,
+    "expected": "1900-01-05",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 5,
+    "expected": "1900-01-04",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 4,
+    "expected": "1900-01-03",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 3,
+    "expected": "1900-01-02",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 2,
+    "expected": "1900-01-01",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 1,
+    "expected": "1899-12-31",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 0,
+    "expected": "1899-12-30",
+    "options": {
+      "leap1900": false
+    }
+  }
+]

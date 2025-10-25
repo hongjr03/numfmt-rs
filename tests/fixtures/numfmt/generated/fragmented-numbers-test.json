@@ -1,0 +1,102 @@
+[
+  {
+    "pattern": "0.00E+0x0",
+    "value": 123456789,
+    "expected": "1.23E+0x8"
+  },
+  {
+    "pattern": "0.00E+0x0",
+    "value": 123456789,
+    "expected": "1.23E+0x8"
+  },
+  {
+    "pattern": "0.00E+?x?",
+    "value": 123456789,
+    "expected": "1.23E+ x8"
+  },
+  {
+    "pattern": "0.00E+#x#",
+    "value": 123456789,
+    "expected": "1.23E+x8"
+  },
+  {
+    "pattern": "0.0x0E+0",
+    "value": 123456789,
+    "expected": "1.2x3E+8"
+  },
+  {
+    "pattern": "0x0.00E+0",
+    "value": 123456789,
+    "expected": "0x1.23E+8"
+  },
+  {
+    "pattern": "0x0.0x0E+0x0",
+    "value": 1,
+    "expected": "0x1.0x0E+0x0"
+  },
+  {
+    "pattern": "#x#.#x#E+#x#",
+    "value": 1,
+    "expected": "x1.xE+x0"
+  },
+  {
+    "pattern": "?x?.?x?E+?x?",
+    "value": 1,
+    "expected": " x1. x E+ x0"
+  },
+  {
+    "pattern": "00 00/00",
+    "value": 1,
+    "expected": "01 00/01"
+  },
+  {
+    "pattern": "00x00/00",
+    "value": 12345.67,
+    "expected": "12345x65/97"
+  },
+  {
+    "pattern": "0z0 00/00",
+    "value": 12345.67,
+    "expected": "1234z5 65/97"
+  },
+  {
+    "pattern": "00 0z0/00",
+    "value": 12345.67,
+    "expected": "1234 5z65/97"
+  },
+  {
+    "pattern": "00 00/0z0",
+    "value": 12345.67,
+    "expected": "12345 02/3z0"
+  },
+  {
+    "pattern": "00 0/0",
+    "value": 12345.67,
+    "expected": "12345 2/3"
+  },
+  {
+    "pattern": "00 ??/?z?",
+    "value": 12345.67,
+    "expected": "12345  2/3z "
+  },
+  {
+    "pattern": "000E+00",
+    "value": 12345.67,
+    "expected": "012E+03"
+  },
+  {
+    "pattern": "00x0E+00",
+    "value": 12345.67,
+    "expected": "01x2E+03"
+  },
+  {
+    "pattern": "000E+0x0",
+    "value": 12345.67,
+    "expected": "012E+0x3"
+  },
+  {
+    "pattern": "0.0E+0x00",
+    "value": 1234567890000,
+    "expected": "1.2E+0x12"
+  }
+]

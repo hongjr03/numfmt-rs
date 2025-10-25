@@ -1,0 +1,839 @@
+[
+  {
+    "pattern": "-0",
+    "value": -1,
+    "expected": "--1"
+  },
+  {
+    "pattern": "-general",
+    "value": -1,
+    "expected": "--1"
+  },
+  {
+    "pattern": "0.0",
+    "value": -1,
+    "expected": "-1.0"
+  },
+  {
+    "pattern": "0.0",
+    "value": -0.1,
+    "expected": "-0.1"
+  },
+  {
+    "pattern": "-0.0",
+    "value": -0.01,
+    "expected": "-0.0"
+  },
+  {
+    "pattern": "0.0",
+    "value": -0.01,
+    "expected": "0.0"
+  },
+  {
+    "pattern": " - 0.0",
+    "value": -0.01,
+    "expected": " - 0.0"
+  },
+  {
+    "pattern": " - 0.0",
+    "value": -1,
+    "expected": "- - 1.0"
+  },
+  {
+    "pattern": "0.0;-0.0",
+    "value": -0.01,
+    "expected": "-0.0"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": -0.01,
+    "expected": "-0    "
+  },
+  {
+    "pattern": "\\p\\o\\s 0.0;\\n\\e\\g 0.0;",
+    "value": -0.01,
+    "expected": "neg 0.0"
+  },
+  {
+    "pattern": "0.0%",
+    "value": 0.0295,
+    "expected": "3.0%"
+  },
+  {
+    "pattern": "0.0,",
+    "value": 2950,
+    "expected": "3.0"
+  },
+  {
+    "pattern": "0%",
+    "value": 0,
+    "expected": "0%"
+  },
+  {
+    "pattern": "0",
+    "value": null,
+    "expected": ""
+  },
+  {
+    "pattern": "0",
+    "value": null,
+    "expected": "NaN"
+  },
+  {
+    "pattern": "0",
+    "value": null,
+    "expected": "∞"
+  },
+  {
+    "pattern": "0",
+    "value": null,
+    "expected": "-∞"
+  },
+  {
+    "pattern": "0",
+    "value": true,
+    "expected": "TRUE"
+  },
+  {
+    "pattern": "0",
+    "value": false,
+    "expected": "FALSE"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0
+    },
+    "expected": "0."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 1
+    },
+    "expected": "1."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 2
+    },
+    "expected": "2."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 3
+    },
+    "expected": "3."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 4
+    },
+    "expected": "4."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 5
+    },
+    "expected": "5."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 20
+    },
+    "expected": "20."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 32
+    },
+    "expected": "32."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 36809
+    },
+    "expected": "36809."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 73353
+    },
+    "expected": "73353."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 38046
+    },
+    "expected": "38046."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 43890
+    },
+    "expected": "43890."
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 36655.041666666664
+    },
+    "expected": "36655.041667"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0.041666666667879326
+    },
+    "expected": "0.041667"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0.0006944444430700969
+    },
+    "expected": "0.000694"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0.00001157407314167358
+    },
+    "expected": "0.000012"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0.9583333333321207
+    },
+    "expected": "0.958333"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0.04097222222117125
+    },
+    "expected": "0.040972"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0.0006828703699284233
+    },
+    "expected": "0.000683"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 0.9999884259268583
+    },
+    "expected": "0.999988"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 3290.127835648149
+    },
+    "expected": "3290.127836"
+  },
+  {
+    "pattern": "0.######",
+    "value": {
+      "type": "Date",
+      "serial": 3290.127835648149
+    },
+    "expected": "3290.127836"
+  },
+  {
+    "pattern": "MMM D, YYYY",
+    "value": {
+      "type": "Date",
+      "serial": 44074.54375
+    },
+    "expected": "Aug 31, 2020"
+  },
+  {
+    "pattern": "MMM D, YYYY",
+    "value": {
+      "type": "Date",
+      "serial": 44074.112501157404
+    },
+    "expected": "Aug 31, 2020"
+  },
+  {
+    "pattern": "General",
+    "value": 3300.0000000000005,
+    "expected": "3300"
+  },
+  {
+    "pattern": "General",
+    "value": -33000,
+    "expected": "-33000"
+  },
+  {
+    "pattern": "#.##0",
+    "value": -10.29,
+    "expected": "-10.290"
+  },
+  {
+    "pattern": "#.###0",
+    "value": -10.29,
+    "expected": "-10.290"
+  },
+  {
+    "pattern": "#.####0",
+    "value": -10.29,
+    "expected": "-10.290"
+  },
+  {
+    "pattern": "#.###000",
+    "value": -10.29,
+    "expected": "-10.29000"
+  },
+  {
+    "pattern": "#.#0#0#0",
+    "value": -10.29,
+    "expected": "-10.2900"
+  },
+  {
+    "pattern": "#.#00",
+    "value": 1,
+    "expected": "1.00"
+  },
+  {
+    "pattern": "#.####0",
+    "value": 1,
+    "expected": "1.0"
+  },
+  {
+    "pattern": "#.###000",
+    "value": 1,
+    "expected": "1.000"
+  },
+  {
+    "pattern": "#.#0#0#0",
+    "value": 1,
+    "expected": "1.000"
+  },
+  {
+    "pattern": "#.##0",
+    "value": 0.01,
+    "expected": ".010"
+  },
+  {
+    "pattern": "#.###0",
+    "value": 0.01,
+    "expected": ".010"
+  },
+  {
+    "pattern": "#.#00",
+    "value": 0.01,
+    "expected": ".010"
+  },
+  {
+    "pattern": "#.####0",
+    "value": 0.0001,
+    "expected": ".00010"
+  },
+  {
+    "pattern": "#.#00",
+    "value": 0.0001,
+    "expected": ".00"
+  },
+  {
+    "pattern": "#.#0",
+    "value": 0.1,
+    "expected": ".10"
+  },
+  {
+    "pattern": "#.##0",
+    "value": 0.1,
+    "expected": ".10"
+  },
+  {
+    "pattern": "#.###0",
+    "value": 0.1,
+    "expected": ".10"
+  },
+  {
+    "pattern": "#.?00",
+    "value": 1,
+    "expected": "1. 00"
+  },
+  {
+    "pattern": "#.?0",
+    "value": 0.0001,
+    "expected": ". 0"
+  },
+  {
+    "pattern": "#.????0",
+    "value": -10.29,
+    "expected": "-10.29  0"
+  },
+  {
+    "pattern": "#.????0",
+    "value": 0.01,
+    "expected": ".01  0"
+  },
+  {
+    "pattern": "#.#x#0",
+    "value": 1,
+    "expected": "1.x0"
+  },
+  {
+    "pattern": "#.#x#0",
+    "value": 0.1,
+    "expected": ".1x0"
+  },
+  {
+    "pattern": "#.??x?0",
+    "value": 0.01,
+    "expected": ".01x 0"
+  },
+  {
+    "pattern": "0#",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0?",
+    "value": 0,
+    "expected": "0 "
+  },
+  {
+    "pattern": "0#0#",
+    "value": 0,
+    "expected": "00"
+  },
+  {
+    "pattern": "0?0?",
+    "value": 0,
+    "expected": "0 0 "
+  },
+  {
+    "pattern": "[>=100]#,##0;[<=-100]-#,##0;#,##0.00",
+    "value": -3.96,
+    "expected": "-3.96"
+  },
+  {
+    "pattern": "[>=100]#,##0;[<=-100]-#,##0;-#,##0.00",
+    "value": -3.96,
+    "expected": "--3.96"
+  },
+  {
+    "pattern": "[>=100]0;[<=-100]-0;\"xx\"0",
+    "value": -10,
+    "expected": "-xx10"
+  },
+  {
+    "pattern": "[<=-100]-0;\"xx\"0",
+    "value": -10,
+    "expected": "xx10"
+  },
+  {
+    "pattern": "#.##0,00",
+    "value": 0,
+    "expected": ".000"
+  },
+  {
+    "pattern": "#.##0,0,0",
+    "value": 0,
+    "expected": ".000"
+  },
+  {
+    "pattern": ".0",
+    "value": 1234,
+    "expected": "1234.0"
+  },
+  {
+    "pattern": " .0",
+    "value": 1234,
+    "expected": " 1234.0"
+  },
+  {
+    "pattern": "x.0",
+    "value": 1234,
+    "expected": "x1234.0"
+  },
+  {
+    "pattern": " . 0",
+    "value": 1234,
+    "expected": " 1234. 0"
+  },
+  {
+    "pattern": "0 0/0",
+    "value": 1234,
+    "expected": "1234 0/1"
+  },
+  {
+    "pattern": "0/0",
+    "value": 1234,
+    "expected": "1234/1"
+  },
+  {
+    "pattern": "0",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "0?",
+    "value": 1,
+    "expected": "01"
+  },
+  {
+    "pattern": "0??",
+    "value": 1,
+    "expected": "0 1"
+  },
+  {
+    "pattern": "0???",
+    "value": 1,
+    "expected": "0  1"
+  },
+  {
+    "pattern": "0????",
+    "value": 1,
+    "expected": "0   1"
+  },
+  {
+    "pattern": "0",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0?",
+    "value": 0,
+    "expected": "0 "
+  },
+  {
+    "pattern": "0??",
+    "value": 0,
+    "expected": "0  "
+  },
+  {
+    "pattern": "0???",
+    "value": 0,
+    "expected": "0   "
+  },
+  {
+    "pattern": "0????",
+    "value": 0,
+    "expected": "0    "
+  },
+  {
+    "pattern": "0",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "0#",
+    "value": 1,
+    "expected": "01"
+  },
+  {
+    "pattern": "0##",
+    "value": 1,
+    "expected": "01"
+  },
+  {
+    "pattern": "0###",
+    "value": 1,
+    "expected": "01"
+  },
+  {
+    "pattern": "0####",
+    "value": 1,
+    "expected": "01"
+  },
+  {
+    "pattern": "0",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0#",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0##",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0###",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0####",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0,",
+    "value": 1,
+    "expected": "0"
+  },
+  {
+    "pattern": "0,?",
+    "value": 1,
+    "expected": "01"
+  },
+  {
+    "pattern": "0,??",
+    "value": 1,
+    "expected": "0 1"
+  },
+  {
+    "pattern": "0,???",
+    "value": 1,
+    "expected": "0,  1"
+  },
+  {
+    "pattern": "0,????",
+    "value": 1,
+    "expected": "0    1"
+  },
+  {
+    "pattern": "0,",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "0,?",
+    "value": 0,
+    "expected": "0 "
+  },
+  {
+    "pattern": "0,??",
+    "value": 0,
+    "expected": "0  "
+  },
+  {
+    "pattern": "0,???",
+    "value": 0,
+    "expected": "0,   "
+  },
+  {
+    "pattern": "0,????",
+    "value": 0,
+    "expected": "0     "
+  },
+  {
+    "pattern": ".0",
+    "value": 1,
+    "expected": "1.0"
+  },
+  {
+    "pattern": ".?0",
+    "value": 1,
+    "expected": "1. 0"
+  },
+  {
+    "pattern": ".??0",
+    "value": 1,
+    "expected": "1.  0"
+  },
+  {
+    "pattern": ".???0",
+    "value": 1,
+    "expected": "1.   0"
+  },
+  {
+    "pattern": ".????0",
+    "value": 1,
+    "expected": "1.    0"
+  },
+  {
+    "pattern": ".0",
+    "value": 0,
+    "expected": ".0"
+  },
+  {
+    "pattern": ".?0",
+    "value": 0,
+    "expected": ". 0"
+  },
+  {
+    "pattern": ".??0",
+    "value": 0,
+    "expected": ".  0"
+  },
+  {
+    "pattern": ".???0",
+    "value": 0,
+    "expected": ".   0"
+  },
+  {
+    "pattern": ".????0",
+    "value": 0,
+    "expected": ".    0"
+  },
+  {
+    "pattern": ".0",
+    "value": 1,
+    "expected": "1.0"
+  },
+  {
+    "pattern": ".#0",
+    "value": 1,
+    "expected": "1.0"
+  },
+  {
+    "pattern": ".##0",
+    "value": 1,
+    "expected": "1.0"
+  },
+  {
+    "pattern": ".###0",
+    "value": 1,
+    "expected": "1.0"
+  },
+  {
+    "pattern": ".####0",
+    "value": 1,
+    "expected": "1.0"
+  },
+  {
+    "pattern": ".0",
+    "value": 0,
+    "expected": ".0"
+  },
+  {
+    "pattern": ".#0",
+    "value": 0,
+    "expected": ".0"
+  },
+  {
+    "pattern": ".##0",
+    "value": 0,
+    "expected": ".0"
+  },
+  {
+    "pattern": ".###0",
+    "value": 0,
+    "expected": ".0"
+  },
+  {
+    "pattern": ".####0",
+    "value": 0,
+    "expected": ".0"
+  },
+  {
+    "pattern": "mmmm",
+    "value": 1234,
+    "expected": "May"
+  },
+  {
+    "pattern": "MMMM",
+    "value": 1234,
+    "expected": "May"
+  },
+  {
+    "pattern": "Mmmm",
+    "value": 1234,
+    "expected": "May"
+  },
+  {
+    "pattern": "MmMm",
+    "value": 1234,
+    "expected": "May"
+  },
+  {
+    "pattern": "dddd",
+    "value": 1234,
+    "expected": "Monday"
+  },
+  {
+    "pattern": "DDDD",
+    "value": 1234,
+    "expected": "Monday"
+  },
+  {
+    "pattern": "Dddd",
+    "value": 1234,
+    "expected": "Monday"
+  },
+  {
+    "pattern": "dDdD",
+    "value": 1234,
+    "expected": "Monday"
+  },
+  {
+    "pattern": "#,,\"M\"",
+    "value": 6000000,
+    "expected": "6M"
+  },
+  {
+    "pattern": "#,,\"M\";",
+    "value": 6000000,
+    "expected": "6M"
+  },
+  {
+    "pattern": "#,,\"M\";#,,\"M\";0",
+    "value": 6000000,
+    "expected": "6M"
+  },
+  {
+    "pattern": "0.000E+000",
+    "value": 2.33e-32,
+    "expected": "2.330E-032"
+  },
+  {
+    "pattern": "0.000E+000",
+    "value": 2.33e-321,
+    "expected": "2.330E-321"
+  },
+  {
+    "pattern": "0.000E+000",
+    "value": 2.33e+307,
+    "expected": "2.330E+307"
+  },
+  {
+    "pattern": "0.000E+000",
+    "value": null,
+    "expected": "∞"
+  },
+  {
+    "pattern": "General",
+    "value": 2.33e-321,
+    "expected": "2.33E-321"
+  },
+  {
+    "pattern": "0.0",
+    "value": 2.33e-321,
+    "expected": "0.0"
+  }
+]

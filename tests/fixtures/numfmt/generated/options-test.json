@@ -1,0 +1,345 @@
+[
+  {
+    "pattern": "yyyy",
+    "value": -1,
+    "expected": "######",
+    "options": {
+      "dateSpanLarge": false,
+      "dateErrorNumber": false
+    }
+  },
+  {
+    "pattern": "yyyy",
+    "value": -1,
+    "expected": "🦆",
+    "options": {
+      "dateSpanLarge": false,
+      "dateErrorNumber": false,
+      "overflow": "🦆"
+    }
+  },
+  {
+    "pattern": "yyyy",
+    "value": -1,
+    "expected": "👻",
+    "options": {
+      "dateSpanLarge": false,
+      "dateErrorNumber": false,
+      "overflow": "👻"
+    }
+  },
+  {
+    "pattern": "mmmm",
+    "value": 2000,
+    "expected": "June"
+  },
+  {
+    "pattern": "mmmm",
+    "value": 2000,
+    "expected": "六月",
+    "options": {
+      "locale": "zh_CN"
+    }
+  },
+  {
+    "pattern": "mmmm",
+    "value": 2000,
+    "expected": "kesäkuuta",
+    "options": {
+      "locale": "fi"
+    }
+  },
+  {
+    "pattern": "h #",
+    "value": 0,
+    "expected": "######",
+    "options": {
+      "throws": false
+    }
+  },
+  {
+    "pattern": "h #",
+    "value": 0,
+    "expected": "🦂",
+    "options": {
+      "invalid": "🦂",
+      "throws": false
+    }
+  },
+  {
+    "pattern": "h #",
+    "value": 0,
+    "expected": "#VALUE!",
+    "options": {
+      "invalid": "#VALUE!",
+      "throws": false
+    }
+  },
+  {
+    "pattern": "h #",
+    "value": 0,
+    "expected": "true",
+    "options": {
+      "invalid": true,
+      "throws": false
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 60,
+    "expected": "1900-02-29"
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 60,
+    "expected": "1900-02-29",
+    "options": {
+      "leap1900": true
+    }
+  },
+  {
+    "pattern": "yyyy-mm-dd",
+    "value": 60,
+    "expected": "1900-02-28",
+    "options": {
+      "leap1900": false
+    }
+  },
+  {
+    "pattern": "yyyy",
+    "value": -694325,
+    "expected": "-694325"
+  },
+  {
+    "pattern": "yyyy",
+    "value": -1,
+    "expected": "-1",
+    "options": {
+      "dateSpanLarge": false
+    }
+  },
+  {
+    "pattern": "yyyy",
+    "value": -1,
+    "expected": "-1",
+    "options": {
+      "dateSpanLarge": false
+    }
+  },
+  {
+    "pattern": "yyyy",
+    "value": -1,
+    "expected": "-1",
+    "options": {
+      "dateSpanLarge": false,
+      "dateErrorNumber": true
+    }
+  },
+  {
+    "pattern": "yyyy",
+    "value": -1,
+    "expected": "######",
+    "options": {
+      "dateSpanLarge": false,
+      "dateErrorNumber": false
+    }
+  },
+  {
+    "pattern": "???0\" \". 0??",
+    "value": 1,
+    "expected": "   1 . 0  "
+  },
+  {
+    "pattern": "???0\" \". 0??",
+    "value": 1,
+    "expected": "   1 . 0  ",
+    "options": {
+      "nbsp": true
+    }
+  },
+  {
+    "pattern": "???0\" \". 0??",
+    "value": 1,
+    "expected": "   1 . 0  ",
+    "options": {
+      "nbsp": false
+    }
+  },
+  {
+    "pattern": "0 \"foo bar\" .0",
+    "value": 1.1,
+    "expected": "1 foo bar .1"
+  },
+  {
+    "pattern": "0 \"foo bar\" .0",
+    "value": 1.1,
+    "expected": "1 foo bar .1",
+    "options": {
+      "nbsp": false
+    }
+  },
+  {
+    "pattern": "0 \"foo bar\" .0",
+    "value": 1.1,
+    "expected": "1 foo bar .1",
+    "options": {
+      "nbsp": true
+    }
+  },
+  {
+    "pattern": "0",
+    "value": 1234567890,
+    "expected": "1234567890",
+    "options": {
+      "grouping": [
+        2,
+        2
+      ]
+    }
+  },
+  {
+    "pattern": "#,##0",
+    "value": 1234567890,
+    "expected": "1,234,567,890",
+    "options": {
+      "grouping": [
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "pattern": "#,##0",
+    "value": 1234567890,
+    "expected": "1,234,567,890",
+    "options": {
+      "grouping": [
+        3
+      ]
+    }
+  },
+  {
+    "pattern": "#,##0",
+    "value": 1234567890,
+    "expected": "1,23,45,67,890",
+    "options": {
+      "grouping": [
+        3,
+        2
+      ]
+    }
+  },
+  {
+    "pattern": "#,##0",
+    "value": 1234567890,
+    "expected": "12,34,56,78,90",
+    "options": {
+      "grouping": [
+        2,
+        2
+      ]
+    }
+  },
+  {
+    "pattern": "#,##0",
+    "value": 1234567890,
+    "expected": "12,34,56,78,90",
+    "options": {
+      "grouping": [
+        2
+      ]
+    }
+  },
+  {
+    "pattern": "#,##0",
+    "value": 1234567890,
+    "expected": "12,345,678,90",
+    "options": {
+      "grouping": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "pattern": "_($* #,##0.00_)",
+    "value": 12345.67,
+    "expected": " $12,345.67 "
+  },
+  {
+    "pattern": "_($* #,##0.00_)",
+    "value": 12345.67,
+    "expected": "\u0003($12,345.67\u0003)",
+    "options": {
+      "skipChar": "\u0003"
+    }
+  },
+  {
+    "pattern": "_($* #,##0.00_)",
+    "value": 12345.67,
+    "expected": "ÆÐ($12,345.67ÆÐ)",
+    "options": {
+      "skipChar": "ÆÐ"
+    }
+  },
+  {
+    "pattern": "_($* #,##0.00_)",
+    "value": 12345.67,
+    "expected": " $\u0004 12,345.67 ",
+    "options": {
+      "fillChar": "\u0004"
+    }
+  },
+  {
+    "pattern": "_($* #,##0.00_)",
+    "value": 12345.67,
+    "expected": " $ÞÖ 12,345.67 ",
+    "options": {
+      "fillChar": "ÞÖ"
+    }
+  },
+  {
+    "pattern": "_($* #,##0.00_)",
+    "value": 12345.67,
+    "expected": "\u0003($\u0004 12,345.67\u0003)",
+    "options": {
+      "skipChar": "\u0003",
+      "fillChar": "\u0004"
+    }
+  },
+  {
+    "pattern": "ddd, dd mmm yyyy hh:mm:ss \"GMT\"",
+    "value": {
+      "type": "Date",
+      "serial": 36526
+    },
+    "expected": "Sat, 01 Jan 2000 00:00:00 GMT",
+    "options": {
+      "nbsp": 0
+    }
+  },
+  {
+    "pattern": "ddd, dd mmm yyyy hh:mm:ss \"GMT\"",
+    "value": {
+      "type": "Date",
+      "serial": 36525.770833333336
+    },
+    "expected": "Fri, 31 Dec 1999 18:30:00 GMT",
+    "options": {
+      "nbsp": 0,
+      "ignoreTimezone": true
+    }
+  },
+  {
+    "pattern": "ddd, dd mmm yyyy hh:mm:ss \"GMT\"",
+    "value": {
+      "type": "Date",
+      "serial": 36526
+    },
+    "expected": "Sat, 01 Jan 2000 00:00:00 GMT",
+    "options": {
+      "nbsp": 0,
+      "ignoreTimezone": false
+    }
+  }
+]

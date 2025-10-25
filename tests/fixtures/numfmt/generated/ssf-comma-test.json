@@ -1,0 +1,527 @@
+[
+  {
+    "pattern": "#.0000,,,",
+    "value": 0.99,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 1.2345,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 12.345,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 123.456,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 1234,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 12345,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 123456,
+    "expected": ".0001"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 1234567,
+    "expected": ".0012"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 12345678,
+    "expected": ".0123"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 123456789,
+    "expected": ".1235"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 1234567890,
+    "expected": "1.2346"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 12345678901,
+    "expected": "12.3457"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 123456789012,
+    "expected": "123.4568"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 4321,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,,",
+    "value": 4321234,
+    "expected": ".0043"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 0.99,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 1.2345,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 12.345,
+    "expected": ".0000"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 123.456,
+    "expected": ".0001"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 1234,
+    "expected": ".0012"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 12345,
+    "expected": ".0123"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 123456,
+    "expected": ".1235"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 1234567,
+    "expected": "1.2346"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 12345678,
+    "expected": "12.3457"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 123456789,
+    "expected": "123.4568"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 1234567890,
+    "expected": "1234.5679"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 12345678901,
+    "expected": "12345.6789"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 123456789012,
+    "expected": "123456.7890"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 4321,
+    "expected": ".0043"
+  },
+  {
+    "pattern": "#.0000,,",
+    "value": 4321234,
+    "expected": "4.3212"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 0.99,
+    "expected": ".0010"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 1.2345,
+    "expected": ".0012"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 12.345,
+    "expected": ".0123"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 123.456,
+    "expected": ".1235"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 1234,
+    "expected": "1.2340"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 12345,
+    "expected": "12.3450"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 123456,
+    "expected": "123.4560"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 1234567,
+    "expected": "1234.5670"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 12345678,
+    "expected": "12345.6780"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 123456789,
+    "expected": "123456.7890"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 1234567890,
+    "expected": "1234567.8900"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 12345678901,
+    "expected": "12345678.9010"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 123456789012,
+    "expected": "123456789.0120"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 4321,
+    "expected": "4.3210"
+  },
+  {
+    "pattern": "#.0000,",
+    "value": 4321234,
+    "expected": "4321.2340"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 0.99,
+    "expected": "1.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 1.2345,
+    "expected": "1.2"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 12.345,
+    "expected": "12.3"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 123.456,
+    "expected": "123.5"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 1234,
+    "expected": "1,234.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 12345,
+    "expected": "12,345.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 123456,
+    "expected": "123,456.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 1234567,
+    "expected": "1,234,567.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 12345678,
+    "expected": "12,345,678.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 123456789,
+    "expected": "123,456,789.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 1234567890,
+    "expected": "1,234,567,890.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 12345678901,
+    "expected": "12,345,678,901.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 123456789012,
+    "expected": "123,456,789,012.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 4321,
+    "expected": "4,321.0"
+  },
+  {
+    "pattern": "#,##0.0",
+    "value": 4321234,
+    "expected": "4,321,234.0"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 0.99,
+    "expected": "1"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 1.2345,
+    "expected": "1"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 12.345,
+    "expected": "12"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 123.456,
+    "expected": "123"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 1234,
+    "expected": "1,234"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 12345,
+    "expected": "12,345"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 123456,
+    "expected": "123,456"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 1234567,
+    "expected": "1,234,567"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 12345678,
+    "expected": "12,345,678"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 123456789,
+    "expected": "123,456,789"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 1234567890,
+    "expected": "1,234,567,890"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 12345678901,
+    "expected": "12,345,678,901"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 123456789012,
+    "expected": "123,456,789,012"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 4321,
+    "expected": "4,321"
+  },
+  {
+    "pattern": "###,##0",
+    "value": 4321234,
+    "expected": "4,321,234"
+  },
+  {
+    "pattern": "###,###",
+    "value": 0.99,
+    "expected": "1"
+  },
+  {
+    "pattern": "###,###",
+    "value": 1.2345,
+    "expected": "1"
+  },
+  {
+    "pattern": "###,###",
+    "value": 12.345,
+    "expected": "12"
+  },
+  {
+    "pattern": "###,###",
+    "value": 123.456,
+    "expected": "123"
+  },
+  {
+    "pattern": "###,###",
+    "value": 1234,
+    "expected": "1,234"
+  },
+  {
+    "pattern": "###,###",
+    "value": 12345,
+    "expected": "12,345"
+  },
+  {
+    "pattern": "###,###",
+    "value": 123456,
+    "expected": "123,456"
+  },
+  {
+    "pattern": "###,###",
+    "value": 1234567,
+    "expected": "1,234,567"
+  },
+  {
+    "pattern": "###,###",
+    "value": 12345678,
+    "expected": "12,345,678"
+  },
+  {
+    "pattern": "###,###",
+    "value": 123456789,
+    "expected": "123,456,789"
+  },
+  {
+    "pattern": "###,###",
+    "value": 1234567890,
+    "expected": "1,234,567,890"
+  },
+  {
+    "pattern": "###,###",
+    "value": 12345678901,
+    "expected": "12,345,678,901"
+  },
+  {
+    "pattern": "###,###",
+    "value": 123456789012,
+    "expected": "123,456,789,012"
+  },
+  {
+    "pattern": "###,###",
+    "value": 4321,
+    "expected": "4,321"
+  },
+  {
+    "pattern": "###,###",
+    "value": 4321234,
+    "expected": "4,321,234"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 0.99,
+    "expected": ".99"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 1.2345,
+    "expected": "1.23"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 12.345,
+    "expected": "12.35"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 123.456,
+    "expected": "123.46"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 1234,
+    "expected": "1,234.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 12345,
+    "expected": "12,345.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 123456,
+    "expected": "123,456.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 1234567,
+    "expected": "1,234,567.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 12345678,
+    "expected": "12,345,678.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 123456789,
+    "expected": "123,456,789.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 1234567890,
+    "expected": "1,234,567,890.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 12345678901,
+    "expected": "12,345,678,901.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 123456789012,
+    "expected": "123,456,789,012.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 4321,
+    "expected": "4,321.00"
+  },
+  {
+    "pattern": "#,###.00",
+    "value": 4321234,
+    "expected": "4,321,234.00"
+  }
+]

@@ -1,0 +1,758 @@
+[
+  {
+    "pattern": "# ?/?",
+    "value": 1,
+    "expected": "1    ",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": -1.2,
+    "expected": "-1 1/5",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": 12.3,
+    "expected": "12 1/3",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": -12.34,
+    "expected": "-12 1/3",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": 123.45,
+    "expected": "123 4/9",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": -123.456,
+    "expected": "-123 1/2",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": 1234.567,
+    "expected": "1234 4/7",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": -1234.5678,
+    "expected": "-1234 4/7",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": 12345.6789,
+    "expected": "12345 2/3",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": -12345.67891,
+    "expected": "-12345 2/3",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": 1,
+    "expected": "1      ",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": -1.2,
+    "expected": "-1  1/5 ",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": 12.3,
+    "expected": "12  3/10",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": -12.34,
+    "expected": "-12 17/50",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": 123.45,
+    "expected": "123  9/20",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": -123.456,
+    "expected": "-123 26/57",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": 1234.567,
+    "expected": "1234 55/97",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": -1234.5678,
+    "expected": "-1234 46/81",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": 12345.6789,
+    "expected": "12345 55/81",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ??/??",
+    "value": -12345.67891,
+    "expected": "-12345 55/81",
+    "options": "# ??/??"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": 1,
+    "expected": "1        ",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": -1.2,
+    "expected": "-1   1/5  ",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": 12.3,
+    "expected": "12   3/10 ",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": -12.34,
+    "expected": "-12  17/50 ",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": 123.45,
+    "expected": "123   9/20 ",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": -123.456,
+    "expected": "-123  57/125",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": 1234.567,
+    "expected": "1234  55/97 ",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": -1234.5678,
+    "expected": "-1234  67/118",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": 12345.6789,
+    "expected": "12345  74/109",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ???/???",
+    "value": -12345.67891,
+    "expected": "-12345 573/844",
+    "options": "# ???/???"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": 1,
+    "expected": "1    ",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": -1.2,
+    "expected": "-1    ",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": 12.3,
+    "expected": "12 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": -12.34,
+    "expected": "-12 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": 123.45,
+    "expected": "123 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": -123.456,
+    "expected": "-123 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": 1234.567,
+    "expected": "1234 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": -1234.5678,
+    "expected": "-1234 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": 12345.6789,
+    "expected": "12345 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/2",
+    "value": -12345.67891,
+    "expected": "-12345 1/2",
+    "options": "# ?/2"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": 1,
+    "expected": "1    ",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": -1.2,
+    "expected": "-1 1/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": 12.3,
+    "expected": "12 1/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": -12.34,
+    "expected": "-12 1/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": 123.45,
+    "expected": "123 2/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": -123.456,
+    "expected": "-123 2/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": 1234.567,
+    "expected": "1234 2/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": -1234.5678,
+    "expected": "-1234 2/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": 12345.6789,
+    "expected": "12345 3/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/4",
+    "value": -12345.67891,
+    "expected": "-12345 3/4",
+    "options": "# ?/4"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": 1,
+    "expected": "1    ",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": -1.2,
+    "expected": "-1 2/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": 12.3,
+    "expected": "12 2/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": -12.34,
+    "expected": "-12 3/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": 123.45,
+    "expected": "123 4/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": -123.456,
+    "expected": "-123 4/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": 1234.567,
+    "expected": "1234 5/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": -1234.5678,
+    "expected": "-1234 5/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": 12345.6789,
+    "expected": "12345 5/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ?/8",
+    "value": -12345.67891,
+    "expected": "-12345 5/8",
+    "options": "# ?/8"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": 1,
+    "expected": "1      ",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": -1.2,
+    "expected": "-1  3/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": 12.3,
+    "expected": "12  5/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": -12.34,
+    "expected": "-12  5/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": 123.45,
+    "expected": "123  7/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": -123.456,
+    "expected": "-123  7/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": 1234.567,
+    "expected": "1234  9/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": -1234.5678,
+    "expected": "-1234  9/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": 12345.6789,
+    "expected": "12345 11/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ??/16",
+    "value": -12345.67891,
+    "expected": "-12345 11/16",
+    "options": "# ??/16"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": 1,
+    "expected": "1     ",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": -1.2,
+    "expected": "-1 2/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": 12.3,
+    "expected": "12 3/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": -12.34,
+    "expected": "-12 3/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": 123.45,
+    "expected": "123 5/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": -123.456,
+    "expected": "-123 5/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": 1234.567,
+    "expected": "1234 6/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": -1234.5678,
+    "expected": "-1234 6/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": 12345.6789,
+    "expected": "12345 7/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ?/10",
+    "value": -12345.67891,
+    "expected": "-12345 7/10",
+    "options": "# ?/10"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": 1,
+    "expected": "1       ",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": -1.2,
+    "expected": "-1 20/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": 12.3,
+    "expected": "12 30/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": -12.34,
+    "expected": "-12 34/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": 123.45,
+    "expected": "123 45/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": -123.456,
+    "expected": "-123 46/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": 1234.567,
+    "expected": "1234 57/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": -1234.5678,
+    "expected": "-1234 57/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": 12345.6789,
+    "expected": "12345 68/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "# ??/100",
+    "value": -12345.67891,
+    "expected": "-12345 68/100",
+    "options": "# ??/100"
+  },
+  {
+    "pattern": "??/??",
+    "value": 1,
+    "expected": " 1/1 ",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": -1.2,
+    "expected": "- 6/5 ",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": 12.3,
+    "expected": "123/10",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": -12.34,
+    "expected": "-617/50",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": 123.45,
+    "expected": "2469/20",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": -123.456,
+    "expected": "-7037/57",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": 1234.567,
+    "expected": "119753/97",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": -1234.5678,
+    "expected": "-100000/81",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": 12345.6789,
+    "expected": "1000000/81",
+    "options": "??/??"
+  },
+  {
+    "pattern": "??/??",
+    "value": -12345.67891,
+    "expected": "-1000000/81",
+    "options": "??/??"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": 0.3,
+    "expected": " 2/7",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": 1.3,
+    "expected": "1 1/3",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ?/?",
+    "value": 2.3,
+    "expected": "2 2/7",
+    "options": "# ?/?"
+  },
+  {
+    "pattern": "# ??/?????????",
+    "value": 0.123251512342345,
+    "expected": " 480894/3901729  ",
+    "options": "# ??/?????????"
+  },
+  {
+    "pattern": "# ?? / ?????????",
+    "value": 0.123251512342345,
+    "expected": " 480894 / 3901729  ",
+    "options": "# ?? / ?????????"
+  },
+  {
+    "pattern": "0",
+    "value": 0,
+    "expected": "0",
+    "options": "0"
+  },
+  {
+    "pattern": "0/0",
+    "value": 0,
+    "expected": "0/1"
+  },
+  {
+    "pattern": "0/0",
+    "value": 1,
+    "expected": "1/1"
+  },
+  {
+    "pattern": "0/0",
+    "value": 123,
+    "expected": "123/1"
+  },
+  {
+    "pattern": "0/0",
+    "value": 12.345,
+    "expected": "37/3"
+  },
+  {
+    "pattern": "0 0/0",
+    "value": 0,
+    "expected": "0 0/1"
+  },
+  {
+    "pattern": "0 0/0",
+    "value": 1,
+    "expected": "1 0/1"
+  },
+  {
+    "pattern": "0 0/0",
+    "value": 123,
+    "expected": "123 0/1"
+  },
+  {
+    "pattern": "0 0/0",
+    "value": 12.345,
+    "expected": "12 1/3"
+  },
+  {
+    "pattern": "?/?",
+    "value": 0,
+    "expected": "0/1"
+  },
+  {
+    "pattern": "?/?",
+    "value": 1,
+    "expected": "1/1"
+  },
+  {
+    "pattern": "?/?",
+    "value": 123,
+    "expected": "123/1"
+  },
+  {
+    "pattern": "?/?",
+    "value": 12.345,
+    "expected": "37/3"
+  },
+  {
+    "pattern": "? ?/?",
+    "value": 0,
+    "expected": "0    "
+  },
+  {
+    "pattern": "? ?/?",
+    "value": 1,
+    "expected": "1    "
+  },
+  {
+    "pattern": "? ?/?",
+    "value": 123,
+    "expected": "123    "
+  },
+  {
+    "pattern": "? ?/?",
+    "value": 12.345,
+    "expected": "12 1/3"
+  },
+  {
+    "pattern": "#/#",
+    "value": 0,
+    "expected": "0/1"
+  },
+  {
+    "pattern": "#/#",
+    "value": 1,
+    "expected": "1/1"
+  },
+  {
+    "pattern": "#/#",
+    "value": 123,
+    "expected": "123/1"
+  },
+  {
+    "pattern": "#/#",
+    "value": 12.345,
+    "expected": "37/3"
+  },
+  {
+    "pattern": "# #/#",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "# #/#",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "# #/#",
+    "value": 123,
+    "expected": "123"
+  },
+  {
+    "pattern": "# #/#",
+    "value": 12.345,
+    "expected": "12 1/3"
+  }
+]

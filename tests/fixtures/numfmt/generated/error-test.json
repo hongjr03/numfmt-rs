@@ -1,0 +1,810 @@
+[
+  {
+    "pattern": "dddd, dd. mmmm yyy",
+    "value": -1,
+    "expected": "######",
+    "options": {
+      "dateSpanLarge": false,
+      "dateErrorNumber": false
+    }
+  },
+  {
+    "pattern": "dddd, dd. mmmm yyy",
+    "value": 2958470,
+    "expected": "######",
+    "options": {
+      "dateSpanLarge": false,
+      "dateErrorNumber": false
+    }
+  },
+  {
+    "pattern": " ",
+    "value": 1,
+    "expected": " "
+  },
+  {
+    "pattern": "!",
+    "value": 1,
+    "expected": "!"
+  },
+  {
+    "pattern": "#",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "$",
+    "value": 1,
+    "expected": "$"
+  },
+  {
+    "pattern": "%",
+    "value": 1,
+    "expected": "%"
+  },
+  {
+    "pattern": "&",
+    "value": 1,
+    "expected": "&"
+  },
+  {
+    "pattern": "'",
+    "value": 1,
+    "expected": "'"
+  },
+  {
+    "pattern": "(",
+    "value": 1,
+    "expected": "("
+  },
+  {
+    "pattern": ")",
+    "value": 1,
+    "expected": ")"
+  },
+  {
+    "pattern": "+",
+    "value": 1,
+    "expected": "+"
+  },
+  {
+    "pattern": ",",
+    "value": 1,
+    "expected": ","
+  },
+  {
+    "pattern": "-",
+    "value": 1,
+    "expected": "-"
+  },
+  {
+    "pattern": ".",
+    "value": 1,
+    "expected": "."
+  },
+  {
+    "pattern": "d/",
+    "value": 1,
+    "expected": "1/"
+  },
+  {
+    "pattern": "0/0",
+    "value": 0,
+    "expected": "0/1"
+  },
+  {
+    "pattern": "0/0",
+    "value": 1,
+    "expected": "1/1"
+  },
+  {
+    "pattern": "0",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "1",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "2",
+    "value": 1,
+    "expected": "2"
+  },
+  {
+    "pattern": "3",
+    "value": 1,
+    "expected": "3"
+  },
+  {
+    "pattern": "4",
+    "value": 1,
+    "expected": "4"
+  },
+  {
+    "pattern": "5",
+    "value": 1,
+    "expected": "5"
+  },
+  {
+    "pattern": "6",
+    "value": 1,
+    "expected": "6"
+  },
+  {
+    "pattern": "7",
+    "value": 1,
+    "expected": "7"
+  },
+  {
+    "pattern": "8",
+    "value": 1,
+    "expected": "8"
+  },
+  {
+    "pattern": "9",
+    "value": 1,
+    "expected": "9"
+  },
+  {
+    "pattern": ":",
+    "value": 1,
+    "expected": ":"
+  },
+  {
+    "pattern": ";",
+    "value": 1,
+    "expected": ""
+  },
+  {
+    "pattern": "<",
+    "value": 1,
+    "expected": "<"
+  },
+  {
+    "pattern": "=",
+    "value": 1,
+    "expected": "="
+  },
+  {
+    "pattern": ">",
+    "value": 1,
+    "expected": ">"
+  },
+  {
+    "pattern": "?",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "@",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "A",
+    "value": 1,
+    "expected": "A"
+  },
+  {
+    "pattern": "B ",
+    "value": 1,
+    "expected": "43 "
+  },
+  {
+    "pattern": "B;",
+    "value": 1,
+    "expected": "43"
+  },
+  {
+    "pattern": "C",
+    "value": 1,
+    "expected": "C"
+  },
+  {
+    "pattern": "D",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "F",
+    "value": 1,
+    "expected": "F"
+  },
+  {
+    "pattern": "G",
+    "value": 1,
+    "expected": ""
+  },
+  {
+    "pattern": "H",
+    "value": 1,
+    "expected": "0"
+  },
+  {
+    "pattern": "I",
+    "value": 1,
+    "expected": "I"
+  },
+  {
+    "pattern": "J",
+    "value": 1,
+    "expected": "J"
+  },
+  {
+    "pattern": "K",
+    "value": 1,
+    "expected": "K"
+  },
+  {
+    "pattern": "L",
+    "value": 1,
+    "expected": "L"
+  },
+  {
+    "pattern": "M",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "O",
+    "value": 1,
+    "expected": "O"
+  },
+  {
+    "pattern": "P",
+    "value": 1,
+    "expected": "P"
+  },
+  {
+    "pattern": "Q",
+    "value": 1,
+    "expected": "Q"
+  },
+  {
+    "pattern": "R",
+    "value": 1,
+    "expected": "R"
+  },
+  {
+    "pattern": "S",
+    "value": 1,
+    "expected": "0"
+  },
+  {
+    "pattern": "T",
+    "value": 1,
+    "expected": "T"
+  },
+  {
+    "pattern": "U",
+    "value": 1,
+    "expected": "U"
+  },
+  {
+    "pattern": "V",
+    "value": 1,
+    "expected": "V"
+  },
+  {
+    "pattern": "W",
+    "value": 1,
+    "expected": "W"
+  },
+  {
+    "pattern": "X",
+    "value": 1,
+    "expected": "X"
+  },
+  {
+    "pattern": "Y",
+    "value": 1,
+    "expected": "00"
+  },
+  {
+    "pattern": "Z",
+    "value": 1,
+    "expected": "Z"
+  },
+  {
+    "pattern": "]",
+    "value": 1,
+    "expected": "]"
+  },
+  {
+    "pattern": "^",
+    "value": 1,
+    "expected": "^"
+  },
+  {
+    "pattern": "`",
+    "value": 1,
+    "expected": "`"
+  },
+  {
+    "pattern": "a",
+    "value": 1,
+    "expected": "a"
+  },
+  {
+    "pattern": "b",
+    "value": 1,
+    "expected": "43"
+  },
+  {
+    "pattern": "c",
+    "value": 1,
+    "expected": "c"
+  },
+  {
+    "pattern": "d",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "e",
+    "value": 1,
+    "expected": "1900"
+  },
+  {
+    "pattern": "f",
+    "value": 1,
+    "expected": "f"
+  },
+  {
+    "pattern": "g",
+    "value": 1,
+    "expected": ""
+  },
+  {
+    "pattern": "h",
+    "value": 1,
+    "expected": "0"
+  },
+  {
+    "pattern": "i",
+    "value": 1,
+    "expected": "i"
+  },
+  {
+    "pattern": "j",
+    "value": 1,
+    "expected": "j"
+  },
+  {
+    "pattern": "k",
+    "value": 1,
+    "expected": "k"
+  },
+  {
+    "pattern": "l",
+    "value": 1,
+    "expected": "l"
+  },
+  {
+    "pattern": "m",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "o",
+    "value": 1,
+    "expected": "o"
+  },
+  {
+    "pattern": "p",
+    "value": 1,
+    "expected": "p"
+  },
+  {
+    "pattern": "q",
+    "value": 1,
+    "expected": "q"
+  },
+  {
+    "pattern": "r",
+    "value": 1,
+    "expected": "r"
+  },
+  {
+    "pattern": "s",
+    "value": 1,
+    "expected": "0"
+  },
+  {
+    "pattern": "t",
+    "value": 1,
+    "expected": "t"
+  },
+  {
+    "pattern": "u",
+    "value": 1,
+    "expected": "u"
+  },
+  {
+    "pattern": "v",
+    "value": 1,
+    "expected": "v"
+  },
+  {
+    "pattern": "w",
+    "value": 1,
+    "expected": "w"
+  },
+  {
+    "pattern": "x",
+    "value": 1,
+    "expected": "x"
+  },
+  {
+    "pattern": "y",
+    "value": 1,
+    "expected": "00"
+  },
+  {
+    "pattern": "z",
+    "value": 1,
+    "expected": "z"
+  },
+  {
+    "pattern": "{",
+    "value": 1,
+    "expected": "{"
+  },
+  {
+    "pattern": "|",
+    "value": 1,
+    "expected": "|"
+  },
+  {
+    "pattern": "}",
+    "value": 1,
+    "expected": "}"
+  },
+  {
+    "pattern": "~",
+    "value": 1,
+    "expected": "~"
+  },
+  {
+    "pattern": "",
+    "value": 1,
+    "expected": ""
+  },
+  {
+    "pattern": "Ä",
+    "value": 1,
+    "expected": "Ä"
+  },
+  {
+    "pattern": "Å",
+    "value": 1,
+    "expected": "Å"
+  },
+  {
+    "pattern": "Ç",
+    "value": 1,
+    "expected": "Ç"
+  },
+  {
+    "pattern": "Ö",
+    "value": 1,
+    "expected": "Ö"
+  },
+  {
+    "pattern": "Ü",
+    "value": 1,
+    "expected": "Ü"
+  },
+  {
+    "pattern": "á",
+    "value": 1,
+    "expected": "á"
+  },
+  {
+    "pattern": "à",
+    "value": 1,
+    "expected": "à"
+  },
+  {
+    "pattern": "â",
+    "value": 1,
+    "expected": "â"
+  },
+  {
+    "pattern": "ä",
+    "value": 1,
+    "expected": "ä"
+  },
+  {
+    "pattern": "ã",
+    "value": 1,
+    "expected": "ã"
+  },
+  {
+    "pattern": "å",
+    "value": 1,
+    "expected": "å"
+  },
+  {
+    "pattern": "ç",
+    "value": 1,
+    "expected": "ç"
+  },
+  {
+    "pattern": "í",
+    "value": 1,
+    "expected": "í"
+  },
+  {
+    "pattern": "ì",
+    "value": 1,
+    "expected": "ì"
+  },
+  {
+    "pattern": "î",
+    "value": 1,
+    "expected": "î"
+  },
+  {
+    "pattern": "ï",
+    "value": 1,
+    "expected": "ï"
+  },
+  {
+    "pattern": "ó",
+    "value": 1,
+    "expected": "ó"
+  },
+  {
+    "pattern": "ò",
+    "value": 1,
+    "expected": "ò"
+  },
+  {
+    "pattern": "ô",
+    "value": 1,
+    "expected": "ô"
+  },
+  {
+    "pattern": "ö",
+    "value": 1,
+    "expected": "ö"
+  },
+  {
+    "pattern": "õ",
+    "value": 1,
+    "expected": "õ"
+  },
+  {
+    "pattern": "ú",
+    "value": 1,
+    "expected": "ú"
+  },
+  {
+    "pattern": "ù",
+    "value": 1,
+    "expected": "ù"
+  },
+  {
+    "pattern": "û",
+    "value": 1,
+    "expected": "û"
+  },
+  {
+    "pattern": "ü",
+    "value": 1,
+    "expected": "ü"
+  },
+  {
+    "pattern": "†",
+    "value": 1,
+    "expected": "†"
+  },
+  {
+    "pattern": "°",
+    "value": 1,
+    "expected": "°"
+  },
+  {
+    "pattern": "¢",
+    "value": 1,
+    "expected": "¢"
+  },
+  {
+    "pattern": "£",
+    "value": 1,
+    "expected": "£"
+  },
+  {
+    "pattern": "§",
+    "value": 1,
+    "expected": "§"
+  },
+  {
+    "pattern": "•",
+    "value": 1,
+    "expected": "•"
+  },
+  {
+    "pattern": "¶",
+    "value": 1,
+    "expected": "¶"
+  },
+  {
+    "pattern": "ß",
+    "value": 1,
+    "expected": "ß"
+  },
+  {
+    "pattern": "®",
+    "value": 1,
+    "expected": "®"
+  },
+  {
+    "pattern": "©",
+    "value": 1,
+    "expected": "©"
+  },
+  {
+    "pattern": "™",
+    "value": 1,
+    "expected": "™"
+  },
+  {
+    "pattern": "´",
+    "value": 1,
+    "expected": "´"
+  },
+  {
+    "pattern": "¨",
+    "value": 1,
+    "expected": "¨"
+  },
+  {
+    "pattern": "≠",
+    "value": 1,
+    "expected": "≠"
+  },
+  {
+    "pattern": "Æ",
+    "value": 1,
+    "expected": "Æ"
+  },
+  {
+    "pattern": "Ø",
+    "value": 1,
+    "expected": "Ø"
+  },
+  {
+    "pattern": "∞",
+    "value": 1,
+    "expected": "∞"
+  },
+  {
+    "pattern": "±",
+    "value": 1,
+    "expected": "±"
+  },
+  {
+    "pattern": "≤",
+    "value": 1,
+    "expected": "≤"
+  },
+  {
+    "pattern": "≥",
+    "value": 1,
+    "expected": "≥"
+  },
+  {
+    "pattern": "¥",
+    "value": 1,
+    "expected": "¥"
+  },
+  {
+    "pattern": "µ",
+    "value": 1,
+    "expected": "µ"
+  },
+  {
+    "pattern": "∂",
+    "value": 1,
+    "expected": "∂"
+  },
+  {
+    "pattern": "∑",
+    "value": 1,
+    "expected": "∑"
+  },
+  {
+    "pattern": "∏",
+    "value": 1,
+    "expected": "∏"
+  },
+  {
+    "pattern": "π",
+    "value": 1,
+    "expected": "π"
+  },
+  {
+    "pattern": "∫",
+    "value": 1,
+    "expected": "∫"
+  },
+  {
+    "pattern": "ª",
+    "value": 1,
+    "expected": "ª"
+  },
+  {
+    "pattern": "º",
+    "value": 1,
+    "expected": "º"
+  },
+  {
+    "pattern": "Ω",
+    "value": 1,
+    "expected": "Ω"
+  },
+  {
+    "pattern": "æ",
+    "value": 1,
+    "expected": "æ"
+  },
+  {
+    "pattern": "ø",
+    "value": 1,
+    "expected": "ø"
+  },
+  {
+    "pattern": "¿",
+    "value": 1,
+    "expected": "¿"
+  },
+  {
+    "pattern": "¡",
+    "value": 1,
+    "expected": "¡"
+  },
+  {
+    "pattern": "¬",
+    "value": 1,
+    "expected": "¬"
+  },
+  {
+    "pattern": "e",
+    "value": 1,
+    "expected": "1900"
+  },
+  {
+    "pattern": "e+",
+    "value": 1,
+    "expected": "1900+"
+  },
+  {
+    "pattern": "e-",
+    "value": 1,
+    "expected": "1900-"
+  },
+  {
+    "pattern": "0E+0",
+    "value": 1,
+    "expected": "1E+0"
+  },
+  {
+    "pattern": "0E-0",
+    "value": 1,
+    "expected": "1E0"
+  },
+  {
+    "pattern": "0 E+ 0",
+    "value": 1,
+    "expected": "1 E +0"
+  },
+  {
+    "pattern": "e-m",
+    "value": 1,
+    "expected": "1900-1"
+  }
+]

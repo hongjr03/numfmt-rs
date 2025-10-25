@@ -1,0 +1,62 @@
+[
+  {
+    "pattern": "@@",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "@@",
+    "value": -1,
+    "expected": "-1"
+  },
+  {
+    "pattern": "@@",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "@@",
+    "value": "text",
+    "expected": "texttext"
+  },
+  {
+    "pattern": "@ \"foo\"",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "@ \"foo\"",
+    "value": -1,
+    "expected": "-1"
+  },
+  {
+    "pattern": "@ \"foo\"",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "@ \"foo\"",
+    "value": "text",
+    "expected": "text foo"
+  },
+  {
+    "pattern": "\"bar\" @ \"foo\"",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "\"bar\" @ \"foo\"",
+    "value": -1,
+    "expected": "-1"
+  },
+  {
+    "pattern": "\"bar\" @ \"foo\"",
+    "value": 0,
+    "expected": "0"
+  },
+  {
+    "pattern": "\"bar\" @ \"foo\"",
+    "value": "text",
+    "expected": "bar text foo"
+  }
+]

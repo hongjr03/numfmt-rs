@@ -1,0 +1,2542 @@
+[
+  {
+    "pattern": "General",
+    "value": 1.234567e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000001234567,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00001234567,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0001234567,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.001234567,
+    "expected": "0.001234567"
+  },
+  {
+    "pattern": "General",
+    "value": 0.01234567,
+    "expected": "0.01234567"
+  },
+  {
+    "pattern": "General",
+    "value": 0.1234567,
+    "expected": "0.1234567"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567,
+    "expected": "1.234567"
+  },
+  {
+    "pattern": "General",
+    "value": 12.34567,
+    "expected": "12.34567"
+  },
+  {
+    "pattern": "General",
+    "value": 123.4567,
+    "expected": "123.4567"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.567,
+    "expected": "1234.567"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.67,
+    "expected": "12345.67"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.7,
+    "expected": "123456.7"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567,
+    "expected": "1234567"
+  },
+  {
+    "pattern": "General",
+    "value": 12345670,
+    "expected": "12345670"
+  },
+  {
+    "pattern": "General",
+    "value": 123456700,
+    "expected": "123456700"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567000,
+    "expected": "1234567000"
+  },
+  {
+    "pattern": "General",
+    "value": 12345670000,
+    "expected": "12345670000"
+  },
+  {
+    "pattern": "General",
+    "value": 123456700000,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567000000,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345670000000,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456700000000,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-14,
+    "expected": "1E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-13,
+    "expected": "1E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-12,
+    "expected": "1E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-11,
+    "expected": "1E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-10,
+    "expected": "1E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-9,
+    "expected": "0.000000001"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-8,
+    "expected": "0.00000001"
+  },
+  {
+    "pattern": "General",
+    "value": 1e-7,
+    "expected": "0.0000001"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000001,
+    "expected": "0.000001"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00001,
+    "expected": "0.00001"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0001,
+    "expected": "0.0001"
+  },
+  {
+    "pattern": "General",
+    "value": 0.001,
+    "expected": "0.001"
+  },
+  {
+    "pattern": "General",
+    "value": 0.01,
+    "expected": "0.01"
+  },
+  {
+    "pattern": "General",
+    "value": 0.1,
+    "expected": "0.1"
+  },
+  {
+    "pattern": "General",
+    "value": 1,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 10,
+    "expected": "10"
+  },
+  {
+    "pattern": "General",
+    "value": 100,
+    "expected": "100"
+  },
+  {
+    "pattern": "General",
+    "value": 1000,
+    "expected": "1000"
+  },
+  {
+    "pattern": "General",
+    "value": 10000,
+    "expected": "10000"
+  },
+  {
+    "pattern": "General",
+    "value": 100000,
+    "expected": "100000"
+  },
+  {
+    "pattern": "General",
+    "value": 1000000,
+    "expected": "1000000"
+  },
+  {
+    "pattern": "General",
+    "value": 10000000,
+    "expected": "10000000"
+  },
+  {
+    "pattern": "General",
+    "value": 100000000,
+    "expected": "100000000"
+  },
+  {
+    "pattern": "General",
+    "value": 1000000000,
+    "expected": "1000000000"
+  },
+  {
+    "pattern": "General",
+    "value": 10000000000,
+    "expected": "10000000000"
+  },
+  {
+    "pattern": "General",
+    "value": 100000000000,
+    "expected": "1E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1000000000000,
+    "expected": "1E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 10000000000000,
+    "expected": "1E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 100000000000000,
+    "expected": "1E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-14,
+    "expected": "1.2E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-13,
+    "expected": "1.2E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-12,
+    "expected": "1.2E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-11,
+    "expected": "1.2E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-10,
+    "expected": "1.2E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-9,
+    "expected": "1.2E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-8,
+    "expected": "0.000000012"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2e-7,
+    "expected": "0.00000012"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000012,
+    "expected": "0.0000012"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000012,
+    "expected": "0.000012"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00012,
+    "expected": "0.00012"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0012,
+    "expected": "0.0012"
+  },
+  {
+    "pattern": "General",
+    "value": 0.012,
+    "expected": "0.012"
+  },
+  {
+    "pattern": "General",
+    "value": 0.12,
+    "expected": "0.12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2,
+    "expected": "1.2"
+  },
+  {
+    "pattern": "General",
+    "value": 12,
+    "expected": "12"
+  },
+  {
+    "pattern": "General",
+    "value": 120,
+    "expected": "120"
+  },
+  {
+    "pattern": "General",
+    "value": 1200,
+    "expected": "1200"
+  },
+  {
+    "pattern": "General",
+    "value": 12000,
+    "expected": "12000"
+  },
+  {
+    "pattern": "General",
+    "value": 120000,
+    "expected": "120000"
+  },
+  {
+    "pattern": "General",
+    "value": 1200000,
+    "expected": "1200000"
+  },
+  {
+    "pattern": "General",
+    "value": 12000000,
+    "expected": "12000000"
+  },
+  {
+    "pattern": "General",
+    "value": 120000000,
+    "expected": "120000000"
+  },
+  {
+    "pattern": "General",
+    "value": 1200000000,
+    "expected": "1200000000"
+  },
+  {
+    "pattern": "General",
+    "value": 12000000000,
+    "expected": "12000000000"
+  },
+  {
+    "pattern": "General",
+    "value": 120000000000,
+    "expected": "1.2E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1200000000000,
+    "expected": "1.2E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12000000000000,
+    "expected": "1.2E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 120000000000000,
+    "expected": "1.2E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-14,
+    "expected": "1.23E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-13,
+    "expected": "1.23E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-12,
+    "expected": "1.23E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-11,
+    "expected": "1.23E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-10,
+    "expected": "1.23E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-9,
+    "expected": "1.23E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-8,
+    "expected": "1.23E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23e-7,
+    "expected": "0.000000123"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00000123,
+    "expected": "0.00000123"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000123,
+    "expected": "0.0000123"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000123,
+    "expected": "0.000123"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00123,
+    "expected": "0.00123"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0123,
+    "expected": "0.0123"
+  },
+  {
+    "pattern": "General",
+    "value": 0.123,
+    "expected": "0.123"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23,
+    "expected": "1.23"
+  },
+  {
+    "pattern": "General",
+    "value": 12.3,
+    "expected": "12.3"
+  },
+  {
+    "pattern": "General",
+    "value": 123,
+    "expected": "123"
+  },
+  {
+    "pattern": "General",
+    "value": 1230,
+    "expected": "1230"
+  },
+  {
+    "pattern": "General",
+    "value": 12300,
+    "expected": "12300"
+  },
+  {
+    "pattern": "General",
+    "value": 123000,
+    "expected": "123000"
+  },
+  {
+    "pattern": "General",
+    "value": 1230000,
+    "expected": "1230000"
+  },
+  {
+    "pattern": "General",
+    "value": 12300000,
+    "expected": "12300000"
+  },
+  {
+    "pattern": "General",
+    "value": 123000000,
+    "expected": "123000000"
+  },
+  {
+    "pattern": "General",
+    "value": 1230000000,
+    "expected": "1230000000"
+  },
+  {
+    "pattern": "General",
+    "value": 12300000000,
+    "expected": "12300000000"
+  },
+  {
+    "pattern": "General",
+    "value": 123000000000,
+    "expected": "1.23E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1230000000000,
+    "expected": "1.23E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12300000000000,
+    "expected": "1.23E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123000000000000,
+    "expected": "1.23E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-14,
+    "expected": "1.234E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-13,
+    "expected": "1.234E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-12,
+    "expected": "1.234E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-11,
+    "expected": "1.234E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-10,
+    "expected": "1.234E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-9,
+    "expected": "1.234E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-8,
+    "expected": "1.234E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234e-7,
+    "expected": "1.234E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000001234,
+    "expected": "0.000001234"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00001234,
+    "expected": "0.00001234"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0001234,
+    "expected": "0.0001234"
+  },
+  {
+    "pattern": "General",
+    "value": 0.001234,
+    "expected": "0.001234"
+  },
+  {
+    "pattern": "General",
+    "value": 0.01234,
+    "expected": "0.01234"
+  },
+  {
+    "pattern": "General",
+    "value": 0.1234,
+    "expected": "0.1234"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234,
+    "expected": "1.234"
+  },
+  {
+    "pattern": "General",
+    "value": 12.34,
+    "expected": "12.34"
+  },
+  {
+    "pattern": "General",
+    "value": 123.4,
+    "expected": "123.4"
+  },
+  {
+    "pattern": "General",
+    "value": 1234,
+    "expected": "1234"
+  },
+  {
+    "pattern": "General",
+    "value": 12340,
+    "expected": "12340"
+  },
+  {
+    "pattern": "General",
+    "value": 123400,
+    "expected": "123400"
+  },
+  {
+    "pattern": "General",
+    "value": 1234000,
+    "expected": "1234000"
+  },
+  {
+    "pattern": "General",
+    "value": 12340000,
+    "expected": "12340000"
+  },
+  {
+    "pattern": "General",
+    "value": 123400000,
+    "expected": "123400000"
+  },
+  {
+    "pattern": "General",
+    "value": 1234000000,
+    "expected": "1234000000"
+  },
+  {
+    "pattern": "General",
+    "value": 12340000000,
+    "expected": "12340000000"
+  },
+  {
+    "pattern": "General",
+    "value": 123400000000,
+    "expected": "1.234E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234000000000,
+    "expected": "1.234E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12340000000000,
+    "expected": "1.234E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123400000000000,
+    "expected": "1.234E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-14,
+    "expected": "1.2345E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-13,
+    "expected": "1.2345E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-12,
+    "expected": "1.2345E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-11,
+    "expected": "1.2345E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-10,
+    "expected": "1.2345E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-9,
+    "expected": "1.2345E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-8,
+    "expected": "1.2345E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345e-7,
+    "expected": "1.2345E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000012345,
+    "expected": "1.2345E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000012345,
+    "expected": "0.000012345"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00012345,
+    "expected": "0.00012345"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0012345,
+    "expected": "0.0012345"
+  },
+  {
+    "pattern": "General",
+    "value": 0.012345,
+    "expected": "0.012345"
+  },
+  {
+    "pattern": "General",
+    "value": 0.12345,
+    "expected": "0.12345"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345,
+    "expected": "1.2345"
+  },
+  {
+    "pattern": "General",
+    "value": 12.345,
+    "expected": "12.345"
+  },
+  {
+    "pattern": "General",
+    "value": 123.45,
+    "expected": "123.45"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.5,
+    "expected": "1234.5"
+  },
+  {
+    "pattern": "General",
+    "value": 12345,
+    "expected": "12345"
+  },
+  {
+    "pattern": "General",
+    "value": 123450,
+    "expected": "123450"
+  },
+  {
+    "pattern": "General",
+    "value": 1234500,
+    "expected": "1234500"
+  },
+  {
+    "pattern": "General",
+    "value": 12345000,
+    "expected": "12345000"
+  },
+  {
+    "pattern": "General",
+    "value": 123450000,
+    "expected": "123450000"
+  },
+  {
+    "pattern": "General",
+    "value": 1234500000,
+    "expected": "1234500000"
+  },
+  {
+    "pattern": "General",
+    "value": 12345000000,
+    "expected": "12345000000"
+  },
+  {
+    "pattern": "General",
+    "value": 123450000000,
+    "expected": "1.2345E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234500000000,
+    "expected": "1.2345E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345000000000,
+    "expected": "1.2345E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123450000000000,
+    "expected": "1.2345E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-14,
+    "expected": "1.23456E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-13,
+    "expected": "1.23456E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-12,
+    "expected": "1.23456E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-11,
+    "expected": "1.23456E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-10,
+    "expected": "1.23456E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-9,
+    "expected": "1.23456E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-8,
+    "expected": "1.23456E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456e-7,
+    "expected": "1.23456E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00000123456,
+    "expected": "1.23456E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000123456,
+    "expected": "1.23456E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000123456,
+    "expected": "0.000123456"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00123456,
+    "expected": "0.00123456"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0123456,
+    "expected": "0.0123456"
+  },
+  {
+    "pattern": "General",
+    "value": 0.123456,
+    "expected": "0.123456"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456,
+    "expected": "1.23456"
+  },
+  {
+    "pattern": "General",
+    "value": 12.3456,
+    "expected": "12.3456"
+  },
+  {
+    "pattern": "General",
+    "value": 123.456,
+    "expected": "123.456"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.56,
+    "expected": "1234.56"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.6,
+    "expected": "12345.6"
+  },
+  {
+    "pattern": "General",
+    "value": 123456,
+    "expected": "123456"
+  },
+  {
+    "pattern": "General",
+    "value": 1234560,
+    "expected": "1234560"
+  },
+  {
+    "pattern": "General",
+    "value": 12345600,
+    "expected": "12345600"
+  },
+  {
+    "pattern": "General",
+    "value": 123456000,
+    "expected": "123456000"
+  },
+  {
+    "pattern": "General",
+    "value": 1234560000,
+    "expected": "1234560000"
+  },
+  {
+    "pattern": "General",
+    "value": 12345600000,
+    "expected": "12345600000"
+  },
+  {
+    "pattern": "General",
+    "value": 123456000000,
+    "expected": "1.23456E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234560000000,
+    "expected": "1.23456E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345600000000,
+    "expected": "1.23456E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456000000000,
+    "expected": "1.23456E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000001234567,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00001234567,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0001234567,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.001234567,
+    "expected": "0.001234567"
+  },
+  {
+    "pattern": "General",
+    "value": 0.01234567,
+    "expected": "0.01234567"
+  },
+  {
+    "pattern": "General",
+    "value": 0.1234567,
+    "expected": "0.1234567"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567,
+    "expected": "1.234567"
+  },
+  {
+    "pattern": "General",
+    "value": 12.34567,
+    "expected": "12.34567"
+  },
+  {
+    "pattern": "General",
+    "value": 123.4567,
+    "expected": "123.4567"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.567,
+    "expected": "1234.567"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.67,
+    "expected": "12345.67"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.7,
+    "expected": "123456.7"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567,
+    "expected": "1234567"
+  },
+  {
+    "pattern": "General",
+    "value": 12345670,
+    "expected": "12345670"
+  },
+  {
+    "pattern": "General",
+    "value": 123456700,
+    "expected": "123456700"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567000,
+    "expected": "1234567000"
+  },
+  {
+    "pattern": "General",
+    "value": 12345670000,
+    "expected": "12345670000"
+  },
+  {
+    "pattern": "General",
+    "value": 123456700000,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567000000,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345670000000,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456700000000,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000012345678,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000012345678,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00012345678,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0012345678,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.012345678,
+    "expected": "0.012345678"
+  },
+  {
+    "pattern": "General",
+    "value": 0.12345678,
+    "expected": "0.12345678"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678,
+    "expected": "1.2345678"
+  },
+  {
+    "pattern": "General",
+    "value": 12.345678,
+    "expected": "12.345678"
+  },
+  {
+    "pattern": "General",
+    "value": 123.45678,
+    "expected": "123.45678"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.5678,
+    "expected": "1234.5678"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.678,
+    "expected": "12345.678"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.78,
+    "expected": "123456.78"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.8,
+    "expected": "1234567.8"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678,
+    "expected": "12345678"
+  },
+  {
+    "pattern": "General",
+    "value": 123456780,
+    "expected": "123456780"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567800,
+    "expected": "1234567800"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678000,
+    "expected": "12345678000"
+  },
+  {
+    "pattern": "General",
+    "value": 123456780000,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567800000,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678000000,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456780000000,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00000123456789,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000123456789,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000123456789,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00123456789,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0123456789,
+    "expected": "0.012345679"
+  },
+  {
+    "pattern": "General",
+    "value": 0.123456789,
+    "expected": "0.123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789,
+    "expected": "1.23456789"
+  },
+  {
+    "pattern": "General",
+    "value": 12.3456789,
+    "expected": "12.3456789"
+  },
+  {
+    "pattern": "General",
+    "value": 123.456789,
+    "expected": "123.456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.56789,
+    "expected": "1234.56789"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.6789,
+    "expected": "12345.6789"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.789,
+    "expected": "123456.789"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.89,
+    "expected": "1234567.89"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678.9,
+    "expected": "12345678.9"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789,
+    "expected": "123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567890,
+    "expected": "1234567890"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678900,
+    "expected": "12345678900"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789000,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567890000,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678900000,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789000000,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000001234567891,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00001234567891,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0001234567891,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.001234567891,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.01234567891,
+    "expected": "0.012345679"
+  },
+  {
+    "pattern": "General",
+    "value": 0.1234567891,
+    "expected": "0.123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891,
+    "expected": "1.234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12.34567891,
+    "expected": "12.34567891"
+  },
+  {
+    "pattern": "General",
+    "value": 123.4567891,
+    "expected": "123.4567891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.567891,
+    "expected": "1234.567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.67891,
+    "expected": "12345.67891"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.7891,
+    "expected": "123456.7891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.891,
+    "expected": "1234567.891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678.91,
+    "expected": "12345678.91"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789.1,
+    "expected": "123456789.1"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891,
+    "expected": "1234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678910,
+    "expected": "12345678910"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789100,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891000,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678910000,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789100000,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000012345678912,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000012345678912,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00012345678912,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0012345678912,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.012345678912,
+    "expected": "0.012345679"
+  },
+  {
+    "pattern": "General",
+    "value": 0.12345678912,
+    "expected": "0.123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912,
+    "expected": "1.234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12.345678912,
+    "expected": "12.34567891"
+  },
+  {
+    "pattern": "General",
+    "value": 123.45678912,
+    "expected": "123.4567891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.5678912,
+    "expected": "1234.567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.678912,
+    "expected": "12345.67891"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.78912,
+    "expected": "123456.7891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.8912,
+    "expected": "1234567.891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678.912,
+    "expected": "12345678.91"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789.12,
+    "expected": "123456789.1"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891.2,
+    "expected": "1234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912,
+    "expected": "12345678912"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789120,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891200,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912000,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789120000,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00000123456789123,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000123456789123,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000123456789123,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00123456789123,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0123456789123,
+    "expected": "0.012345679"
+  },
+  {
+    "pattern": "General",
+    "value": 0.123456789123,
+    "expected": "0.123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123,
+    "expected": "1.234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12.3456789123,
+    "expected": "12.34567891"
+  },
+  {
+    "pattern": "General",
+    "value": 123.456789123,
+    "expected": "123.4567891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.56789123,
+    "expected": "1234.567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.6789123,
+    "expected": "12345.67891"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.789123,
+    "expected": "123456.7891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.89123,
+    "expected": "1234567.891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678.9123,
+    "expected": "12345678.91"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789.123,
+    "expected": "123456789.1"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891.23,
+    "expected": "1234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912.3,
+    "expected": "12345678912"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891230,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912300,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123000,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000001234567891234,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00001234567891234,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0001234567891234,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.001234567891234,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.01234567891234,
+    "expected": "0.012345679"
+  },
+  {
+    "pattern": "General",
+    "value": 0.1234567891234,
+    "expected": "0.123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1.234567891234,
+    "expected": "1.234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12.34567891234,
+    "expected": "12.34567891"
+  },
+  {
+    "pattern": "General",
+    "value": 123.4567891234,
+    "expected": "123.4567891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.567891234,
+    "expected": "1234.567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.67891234,
+    "expected": "12345.67891"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.7891234,
+    "expected": "123456.7891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.891234,
+    "expected": "1234567.891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678.91234,
+    "expected": "12345678.91"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789.1234,
+    "expected": "123456789.1"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891.234,
+    "expected": "1234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912.34,
+    "expected": "12345678912"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123.4,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891234,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912340,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123400,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000012345678912345,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000012345678912345,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00012345678912345,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0012345678912345,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.012345678912345,
+    "expected": "0.012345679"
+  },
+  {
+    "pattern": "General",
+    "value": 0.12345678912345,
+    "expected": "0.123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1.2345678912345,
+    "expected": "1.234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12.345678912345,
+    "expected": "12.34567891"
+  },
+  {
+    "pattern": "General",
+    "value": 123.45678912345,
+    "expected": "123.4567891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.5678912345,
+    "expected": "1234.567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.678912345,
+    "expected": "12345.67891"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.78912345,
+    "expected": "123456.7891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.8912345,
+    "expected": "1234567.891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678.912345,
+    "expected": "12345678.91"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789.12345,
+    "expected": "123456789.1"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891.2345,
+    "expected": "1234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912.345,
+    "expected": "12345678912"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123.45,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891234.5,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912345,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123450,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-14,
+    "expected": "1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-13,
+    "expected": "1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-12,
+    "expected": "1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-11,
+    "expected": "1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-10,
+    "expected": "1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-9,
+    "expected": "1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-8,
+    "expected": "1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456e-7,
+    "expected": "1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00000123456789123456,
+    "expected": "1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0000123456789123456,
+    "expected": "1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": 0.000123456789123456,
+    "expected": "0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": 0.00123456789123456,
+    "expected": "0.001234568"
+  },
+  {
+    "pattern": "General",
+    "value": 0.0123456789123456,
+    "expected": "0.012345679"
+  },
+  {
+    "pattern": "General",
+    "value": 0.123456789123456,
+    "expected": "0.123456789"
+  },
+  {
+    "pattern": "General",
+    "value": 1.23456789123456,
+    "expected": "1.234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12.3456789123456,
+    "expected": "12.34567891"
+  },
+  {
+    "pattern": "General",
+    "value": 123.456789123456,
+    "expected": "123.4567891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234.56789123456,
+    "expected": "1234.567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345.6789123456,
+    "expected": "12345.67891"
+  },
+  {
+    "pattern": "General",
+    "value": 123456.789123456,
+    "expected": "123456.7891"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567.89123456,
+    "expected": "1234567.891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678.9123456,
+    "expected": "12345678.91"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789.123456,
+    "expected": "123456789.1"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891.23456,
+    "expected": "1234567891"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912.3456,
+    "expected": "12345678912"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123.456,
+    "expected": "1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": 1234567891234.56,
+    "expected": "1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": 12345678912345.6,
+    "expected": "1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": 123456789123456,
+    "expected": "1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-14,
+    "expected": "-1.23457E-14"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-13,
+    "expected": "-1.23457E-13"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-12,
+    "expected": "-1.23457E-12"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-11,
+    "expected": "-1.23457E-11"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-10,
+    "expected": "-1.23457E-10"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-9,
+    "expected": "-1.23457E-09"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-8,
+    "expected": "-1.23457E-08"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567e-7,
+    "expected": "-1.23457E-07"
+  },
+  {
+    "pattern": "General",
+    "value": -0.000001234567,
+    "expected": "-1.23457E-06"
+  },
+  {
+    "pattern": "General",
+    "value": -0.00001234567,
+    "expected": "-1.23457E-05"
+  },
+  {
+    "pattern": "General",
+    "value": -0.0001234567,
+    "expected": "-0.000123457"
+  },
+  {
+    "pattern": "General",
+    "value": -0.001234567,
+    "expected": "-0.001234567"
+  },
+  {
+    "pattern": "General",
+    "value": -0.01234567,
+    "expected": "-0.01234567"
+  },
+  {
+    "pattern": "General",
+    "value": -0.1234567,
+    "expected": "-0.1234567"
+  },
+  {
+    "pattern": "General",
+    "value": -1.234567,
+    "expected": "-1.234567"
+  },
+  {
+    "pattern": "General",
+    "value": -12.34567,
+    "expected": "-12.34567"
+  },
+  {
+    "pattern": "General",
+    "value": -123.4567,
+    "expected": "-123.4567"
+  },
+  {
+    "pattern": "General",
+    "value": -1234.567,
+    "expected": "-1234.567"
+  },
+  {
+    "pattern": "General",
+    "value": -12345.67,
+    "expected": "-12345.67"
+  },
+  {
+    "pattern": "General",
+    "value": -123456.7,
+    "expected": "-123456.7"
+  },
+  {
+    "pattern": "General",
+    "value": -1234567,
+    "expected": "-1234567"
+  },
+  {
+    "pattern": "General",
+    "value": -12345670,
+    "expected": "-12345670"
+  },
+  {
+    "pattern": "General",
+    "value": -123456700,
+    "expected": "-123456700"
+  },
+  {
+    "pattern": "General",
+    "value": -1234567000,
+    "expected": "-1234567000"
+  },
+  {
+    "pattern": "General",
+    "value": -12345670000,
+    "expected": "-12345670000"
+  },
+  {
+    "pattern": "General",
+    "value": -123456700000,
+    "expected": "-1.23457E+11"
+  },
+  {
+    "pattern": "General",
+    "value": -1234567000000,
+    "expected": "-1.23457E+12"
+  },
+  {
+    "pattern": "General",
+    "value": -12345670000000,
+    "expected": "-1.23457E+13"
+  },
+  {
+    "pattern": "General",
+    "value": -123456700000000,
+    "expected": "-1.23457E+14"
+  },
+  {
+    "pattern": "General",
+    "value": true,
+    "expected": "TRUE"
+  },
+  {
+    "pattern": "General",
+    "value": false,
+    "expected": "FALSE"
+  },
+  {
+    "pattern": "General",
+    "value": "sheetjs",
+    "expected": "sheetjs"
+  },
+  {
+    "pattern": "General",
+    "value": null,
+    "expected": ""
+  },
+  {
+    "pattern": "General",
+    "value": 0.9999999999999999,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 0.999999999999999,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 0.99999999999999,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 0.9999999999999,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 0.999999999999,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 0.99999999999,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 0.9999999999,
+    "expected": "1"
+  },
+  {
+    "pattern": "General",
+    "value": 0.999999999,
+    "expected": "0.999999999"
+  },
+  {
+    "pattern": "General",
+    "value": 0.99999999,
+    "expected": "0.99999999"
+  },
+  {
+    "pattern": "General",
+    "value": 0.9999999,
+    "expected": "0.9999999"
+  },
+  {
+    "pattern": "General",
+    "value": 0.999999,
+    "expected": "0.999999"
+  }
+]

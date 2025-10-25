@@ -1,0 +1,1882 @@
+[
+  {
+    "pattern": "0E+00",
+    "value": 95000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 96000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 97000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 98000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 99000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 100000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 110000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 120000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 130000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 140000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 199999999,
+    "expected": "2E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 899999999,
+    "expected": "9E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 990000000,
+    "expected": "1E+09"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 999000000,
+    "expected": "1E+09"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 999900000,
+    "expected": "1E+09"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 999990000,
+    "expected": "1E+09"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 95000000,
+    "expected": "9.5E+07"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 96000000,
+    "expected": "9.6E+07"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 97000000,
+    "expected": "9.7E+07"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 98000000,
+    "expected": "9.8E+07"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 99000000,
+    "expected": "9.9E+07"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 100000000,
+    "expected": "1.0E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 110000000,
+    "expected": "1.1E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 120000000,
+    "expected": "1.2E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 130000000,
+    "expected": "1.3E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 140000000,
+    "expected": "1.4E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 199999999,
+    "expected": "2.0E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 899999999,
+    "expected": "9.0E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 990000000,
+    "expected": "9.9E+08"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 999000000,
+    "expected": "1.0E+09"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 999900000,
+    "expected": "1.0E+09"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 999990000,
+    "expected": "1.0E+09"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 95000000,
+    "expected": "9.50E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 96000000,
+    "expected": "9.60E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 97000000,
+    "expected": "9.70E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 98000000,
+    "expected": "9.80E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 99000000,
+    "expected": "9.90E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 100000000,
+    "expected": "1.00E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 110000000,
+    "expected": "1.10E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 120000000,
+    "expected": "1.20E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 130000000,
+    "expected": "1.30E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 140000000,
+    "expected": "1.40E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 199999999,
+    "expected": "2.00E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 899999999,
+    "expected": "9.00E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 990000000,
+    "expected": "9.90E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 999000000,
+    "expected": "9.99E+08"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 999900000,
+    "expected": "1.00E+09"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 999990000,
+    "expected": "1.00E+09"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 95000000,
+    "expected": "9.500E+07"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 96000000,
+    "expected": "9.600E+07"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 97000000,
+    "expected": "9.700E+07"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 98000000,
+    "expected": "9.800E+07"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 99000000,
+    "expected": "9.900E+07"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 100000000,
+    "expected": "1.000E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 110000000,
+    "expected": "1.100E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 120000000,
+    "expected": "1.200E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 130000000,
+    "expected": "1.300E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 140000000,
+    "expected": "1.400E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 199999999,
+    "expected": "2.000E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 899999999,
+    "expected": "9.000E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 990000000,
+    "expected": "9.900E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 999000000,
+    "expected": "9.990E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 999900000,
+    "expected": "9.999E+08"
+  },
+  {
+    "pattern": "0.000E+00",
+    "value": 999990000,
+    "expected": "1.000E+09"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9,
+    "expected": "9.E+00"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9.49999,
+    "expected": "9.E+00"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9.59999,
+    "expected": "1.E+01"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9.69999,
+    "expected": "1.E+01"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 10,
+    "expected": "1.E+01"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 90,
+    "expected": "9.E+01"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 94.9999,
+    "expected": "9.E+01"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 95.9999,
+    "expected": "1.E+02"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 96.9999,
+    "expected": "1.E+02"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 100,
+    "expected": "1.E+02"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 900,
+    "expected": "9.E+02"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 949.999,
+    "expected": "9.E+02"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 959.999,
+    "expected": "1.E+03"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 969.999,
+    "expected": "1.E+03"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 1000,
+    "expected": "1.E+03"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9000,
+    "expected": "9.E+03"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9499.99,
+    "expected": "9.E+03"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9599.99,
+    "expected": "1.E+04"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 9699.99,
+    "expected": "1.E+04"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 10000,
+    "expected": "1.E+04"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 90000,
+    "expected": "9.E+04"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 94999.9,
+    "expected": "9.E+04"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 95999.9,
+    "expected": "1.E+05"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 96999.9,
+    "expected": "1.E+05"
+  },
+  {
+    "pattern": "0.E+00",
+    "value": 100000,
+    "expected": "1.E+05"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9,
+    "expected": "9.0E+00"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9.49999,
+    "expected": "9.5E+00"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9.59999,
+    "expected": "9.6E+00"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9.69999,
+    "expected": "9.7E+00"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 10,
+    "expected": "1.0E+01"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 90,
+    "expected": "9.0E+01"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 94.9999,
+    "expected": "9.5E+01"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 95.9999,
+    "expected": "9.6E+01"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 96.9999,
+    "expected": "9.7E+01"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 100,
+    "expected": "1.0E+02"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 900,
+    "expected": "9.0E+02"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 949.999,
+    "expected": "9.5E+02"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 959.999,
+    "expected": "9.6E+02"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 969.999,
+    "expected": "9.7E+02"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 1000,
+    "expected": "1.0E+03"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9000,
+    "expected": "9.0E+03"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9499.99,
+    "expected": "9.5E+03"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9599.99,
+    "expected": "9.6E+03"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 9699.99,
+    "expected": "9.7E+03"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 10000,
+    "expected": "1.0E+04"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 90000,
+    "expected": "9.0E+04"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 94999.9,
+    "expected": "9.5E+04"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 95999.9,
+    "expected": "9.6E+04"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 96999.9,
+    "expected": "9.7E+04"
+  },
+  {
+    "pattern": "0.0E+00",
+    "value": 100000,
+    "expected": "1.0E+05"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9,
+    "expected": "9.00E+00"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9.49999,
+    "expected": "9.50E+00"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9.59999,
+    "expected": "9.60E+00"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9.69999,
+    "expected": "9.70E+00"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 10,
+    "expected": "1.00E+01"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 90,
+    "expected": "9.00E+01"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 94.9999,
+    "expected": "9.50E+01"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 95.9999,
+    "expected": "9.60E+01"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 96.9999,
+    "expected": "9.70E+01"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 100,
+    "expected": "1.00E+02"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 900,
+    "expected": "9.00E+02"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 949.999,
+    "expected": "9.50E+02"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 959.999,
+    "expected": "9.60E+02"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 969.999,
+    "expected": "9.70E+02"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 1000,
+    "expected": "1.00E+03"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9000,
+    "expected": "9.00E+03"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9499.99,
+    "expected": "9.50E+03"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9599.99,
+    "expected": "9.60E+03"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 9699.99,
+    "expected": "9.70E+03"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 10000,
+    "expected": "1.00E+04"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 90000,
+    "expected": "9.00E+04"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 94999.9,
+    "expected": "9.50E+04"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 95999.9,
+    "expected": "9.60E+04"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 96999.9,
+    "expected": "9.70E+04"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 100000,
+    "expected": "1.00E+05"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9,
+    "expected": "09.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9.49999,
+    "expected": "09.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9.59999,
+    "expected": "10.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9.69999,
+    "expected": "10.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 10,
+    "expected": "10.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 90,
+    "expected": "90.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 94.9999,
+    "expected": "95.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 95.9999,
+    "expected": "96.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 96.9999,
+    "expected": "97.E+00"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 100,
+    "expected": "01.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 900,
+    "expected": "09.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 949.999,
+    "expected": "09.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 959.999,
+    "expected": "10.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 969.999,
+    "expected": "10.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 1000,
+    "expected": "10.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9000,
+    "expected": "90.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9499.99,
+    "expected": "95.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9599.99,
+    "expected": "96.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 9699.99,
+    "expected": "97.E+02"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 10000,
+    "expected": "01.E+04"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 90000,
+    "expected": "09.E+04"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 94999.9,
+    "expected": "09.E+04"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 95999.9,
+    "expected": "10.E+04"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 96999.9,
+    "expected": "10.E+04"
+  },
+  {
+    "pattern": "00.E+00",
+    "value": 100000,
+    "expected": "10.E+04"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9,
+    "expected": "09.0E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9.49999,
+    "expected": "09.5E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9.59999,
+    "expected": "09.6E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9.69999,
+    "expected": "09.7E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 10,
+    "expected": "10.0E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 90,
+    "expected": "90.0E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 94.9999,
+    "expected": "95.0E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 95.9999,
+    "expected": "96.0E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 96.9999,
+    "expected": "97.0E+00"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 100,
+    "expected": "01.0E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 900,
+    "expected": "09.0E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 949.999,
+    "expected": "09.5E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 959.999,
+    "expected": "09.6E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 969.999,
+    "expected": "09.7E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 1000,
+    "expected": "10.0E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9000,
+    "expected": "90.0E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9499.99,
+    "expected": "95.0E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9599.99,
+    "expected": "96.0E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 9699.99,
+    "expected": "97.0E+02"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 10000,
+    "expected": "01.0E+04"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 90000,
+    "expected": "09.0E+04"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 94999.9,
+    "expected": "09.5E+04"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 95999.9,
+    "expected": "09.6E+04"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 96999.9,
+    "expected": "09.7E+04"
+  },
+  {
+    "pattern": "00.0E+00",
+    "value": 100000,
+    "expected": "10.0E+04"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9,
+    "expected": "09.00E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9.49999,
+    "expected": "09.50E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9.59999,
+    "expected": "09.60E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9.69999,
+    "expected": "09.70E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 10,
+    "expected": "10.00E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 90,
+    "expected": "90.00E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 94.9999,
+    "expected": "95.00E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 95.9999,
+    "expected": "96.00E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 96.9999,
+    "expected": "97.00E+00"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 100,
+    "expected": "01.00E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 900,
+    "expected": "09.00E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 949.999,
+    "expected": "09.50E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 959.999,
+    "expected": "09.60E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 969.999,
+    "expected": "09.70E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 1000,
+    "expected": "10.00E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9000,
+    "expected": "90.00E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9499.99,
+    "expected": "95.00E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9599.99,
+    "expected": "96.00E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 9699.99,
+    "expected": "97.00E+02"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 10000,
+    "expected": "01.00E+04"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 90000,
+    "expected": "09.00E+04"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 94999.9,
+    "expected": "09.50E+04"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 95999.9,
+    "expected": "09.60E+04"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 96999.9,
+    "expected": "09.70E+04"
+  },
+  {
+    "pattern": "00.00E+00",
+    "value": 100000,
+    "expected": "10.00E+04"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9,
+    "expected": "009.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9.49999,
+    "expected": "009.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9.59999,
+    "expected": "010.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9.69999,
+    "expected": "010.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 10,
+    "expected": "010.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 90,
+    "expected": "090.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 94.9999,
+    "expected": "095.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 95.9999,
+    "expected": "096.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 96.9999,
+    "expected": "097.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 100,
+    "expected": "100.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 900,
+    "expected": "900.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 949.999,
+    "expected": "950.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 959.999,
+    "expected": "960.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 969.999,
+    "expected": "970.E+00"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 1000,
+    "expected": "001.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9000,
+    "expected": "009.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9499.99,
+    "expected": "009.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9599.99,
+    "expected": "010.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 9699.99,
+    "expected": "010.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 10000,
+    "expected": "010.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 90000,
+    "expected": "090.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 94999.9,
+    "expected": "095.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 95999.9,
+    "expected": "096.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 96999.9,
+    "expected": "097.E+03"
+  },
+  {
+    "pattern": "000.E+00",
+    "value": 100000,
+    "expected": "100.E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9,
+    "expected": "009.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9.49999,
+    "expected": "009.5E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9.59999,
+    "expected": "009.6E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9.69999,
+    "expected": "009.7E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 10,
+    "expected": "010.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 90,
+    "expected": "090.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 94.9999,
+    "expected": "095.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 95.9999,
+    "expected": "096.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 96.9999,
+    "expected": "097.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 100,
+    "expected": "100.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 900,
+    "expected": "900.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 949.999,
+    "expected": "950.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 959.999,
+    "expected": "960.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 969.999,
+    "expected": "970.0E+00"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 1000,
+    "expected": "001.0E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9000,
+    "expected": "009.0E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9499.99,
+    "expected": "009.5E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9599.99,
+    "expected": "009.6E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 9699.99,
+    "expected": "009.7E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 10000,
+    "expected": "010.0E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 90000,
+    "expected": "090.0E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 94999.9,
+    "expected": "095.0E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 95999.9,
+    "expected": "096.0E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 96999.9,
+    "expected": "097.0E+03"
+  },
+  {
+    "pattern": "000.0E+00",
+    "value": 100000,
+    "expected": "100.0E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9,
+    "expected": "009.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9.49999,
+    "expected": "009.50E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9.59999,
+    "expected": "009.60E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9.69999,
+    "expected": "009.70E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 10,
+    "expected": "010.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 90,
+    "expected": "090.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 94.9999,
+    "expected": "095.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 95.9999,
+    "expected": "096.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 96.9999,
+    "expected": "097.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 100,
+    "expected": "100.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 900,
+    "expected": "900.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 949.999,
+    "expected": "950.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 959.999,
+    "expected": "960.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 969.999,
+    "expected": "970.00E+00"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 1000,
+    "expected": "001.00E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9000,
+    "expected": "009.00E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9499.99,
+    "expected": "009.50E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9599.99,
+    "expected": "009.60E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 9699.99,
+    "expected": "009.70E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 10000,
+    "expected": "010.00E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 90000,
+    "expected": "090.00E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 94999.9,
+    "expected": "095.00E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 95999.9,
+    "expected": "096.00E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 96999.9,
+    "expected": "097.00E+03"
+  },
+  {
+    "pattern": "000.00E+00",
+    "value": 100000,
+    "expected": "100.00E+03"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1000000000000,
+    "expected": "1E+12"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 999999999999,
+    "expected": "1E+12"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 950000000000,
+    "expected": "1E+12"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 100000000000,
+    "expected": "1E+11"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 95000000000,
+    "expected": "1E+11"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 10000000000,
+    "expected": "1E+10"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 9500000000,
+    "expected": "1E+10"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1000000000,
+    "expected": "1E+09"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 950000000,
+    "expected": "1E+09"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 100000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 95000000,
+    "expected": "1E+08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 10000000,
+    "expected": "1E+07"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 9500000,
+    "expected": "1E+07"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1000000,
+    "expected": "1E+06"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 950000,
+    "expected": "1E+06"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 100000,
+    "expected": "1E+05"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 95000,
+    "expected": "1E+05"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 10000,
+    "expected": "1E+04"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 9500,
+    "expected": "1E+04"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1000,
+    "expected": "1E+03"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 950,
+    "expected": "1E+03"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 100,
+    "expected": "1E+02"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 95,
+    "expected": "1E+02"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 10,
+    "expected": "1E+01"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 9.5,
+    "expected": "1E+01"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1.4999999,
+    "expected": "1E+00"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1,
+    "expected": "1E+00"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.95,
+    "expected": "1E+00"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.14999999,
+    "expected": "1E-01"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.1,
+    "expected": "1E-01"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.014999999,
+    "expected": "1E-02"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.01,
+    "expected": "1E-02"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.0014999999,
+    "expected": "1E-03"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.001,
+    "expected": "1E-03"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.00014999999,
+    "expected": "1E-04"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.0001,
+    "expected": "1E-04"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.000014999999,
+    "expected": "1E-05"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.00001,
+    "expected": "1E-05"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.00000149999999,
+    "expected": "1E-06"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 0.000001,
+    "expected": "1E-06"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1.4999999e-7,
+    "expected": "1E-07"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1e-7,
+    "expected": "1E-07"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1.4999999e-8,
+    "expected": "1E-08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1e-8,
+    "expected": "1E-08"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1.4999999e-9,
+    "expected": "1E-09"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1e-9,
+    "expected": "1E-09"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1.4999999e-10,
+    "expected": "1E-10"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1e-10,
+    "expected": "1E-10"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1.4999999e-11,
+    "expected": "1E-11"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1e-11,
+    "expected": "1E-11"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1.4999999e-12,
+    "expected": "1E-12"
+  },
+  {
+    "pattern": "0E+00",
+    "value": 1e-12,
+    "expected": "1E-12"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 10000000,
+    "expected": "1.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 20000000,
+    "expected": "2.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 30000000,
+    "expected": "3.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 30010000,
+    "expected": "3.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 30100000,
+    "expected": "3.01E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 31000000,
+    "expected": "3.10E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 31680000,
+    "expected": "3.17E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 31700000,
+    "expected": "3.17E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 32500000,
+    "expected": "3.25E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 35000000,
+    "expected": "3.50E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 40000000,
+    "expected": "4.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 50000000,
+    "expected": "5.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 60000000,
+    "expected": "6.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 70000000,
+    "expected": "7.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 80000000,
+    "expected": "8.00E+07"
+  },
+  {
+    "pattern": "0.00E+00",
+    "value": 90000000,
+    "expected": "9.00E+07"
+  },
+  {
+    "pattern": "0 E+ 0",
+    "value": 10000000,
+    "expected": "1 E +7"
+  },
+  {
+    "pattern": "0 E+ 00",
+    "value": 10000000,
+    "expected": "1 E +07"
+  },
+  {
+    "pattern": "0 E- 0",
+    "value": 10000000,
+    "expected": "1 E 7"
+  },
+  {
+    "pattern": "0 E- 0",
+    "value": 1e-7,
+    "expected": "1 E -7"
+  },
+  {
+    "pattern": "0 E- 00",
+    "value": 1e-7,
+    "expected": "1 E -07"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 0,
+    "expected": ".0E+0"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 1,
+    "expected": ".1E+1"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 10,
+    "expected": ".1E+2"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 100,
+    "expected": ".1E+3"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 1000,
+    "expected": ".1E+4"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 10000,
+    "expected": ".1E+5"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 100000,
+    "expected": ".1E+6"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 123456789,
+    "expected": ".1E+9"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 0.1,
+    "expected": ".1E+0"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 0.01,
+    "expected": ".1E-1"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 0.001,
+    "expected": ".1E-2"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 0.0001,
+    "expected": ".1E-3"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 0.12345,
+    "expected": ".1E+0"
+  },
+  {
+    "pattern": ".0E+0",
+    "value": 0.012345,
+    "expected": ".1E-1"
+  }
+]

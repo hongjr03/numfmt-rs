@@ -94,7 +94,50 @@ pub fn dec2frac(
         curr_n = (number.abs() * curr_d + 0.5).floor();
 
         if curr_n >= maxdigits_n || curr_d >= maxdigits_d {
-            return ((sign as f64 * prev_n).round() as i64, prev_d.round() as i64);
+            let max_den = (maxdigits_d - 1.0).floor() as i64;
+            let max_num_limit = if maxdigits_n.is_finite() {
+                (maxdigits_n - 1.0).floor() as i64
+            } else {
+                i64::MAX
+            };
+            let target = number.abs();
+
+            let mut best_n = if prev_d != 0.0 {
+                prev_n.round() as i64
+            } else {
+                0
+            };
+            let mut best_d = if prev_d != 0.0 {
+                prev_d.round() as i64
+            } else {
+                1
+            };
+            let mut best_diff = if prev_d != 0.0 {
+                (target - (best_n as f64 / best_d as f64)).abs()
+            } else {
+                f64::INFINITY
+            };
+
+            for d in 1..=max_den.max(1) {
+                let n = (target * d as f64).round() as i64;
+                if max_num_limit != i64::MAX && n > max_num_limit {
+                    continue;
+                }
+                let diff = (target - (n as f64 / d as f64)).abs();
+                if diff + PRECISION < best_diff
+                    || ((diff - best_diff).abs() < PRECISION && d < best_d)
+                {
+                    best_diff = diff;
+                    best_n = n;
+                    best_d = d;
+                }
+            }
+
+            if best_d <= 0 {
+                best_d = 1;
+            }
+
+            return ((sign * best_n) as i64, best_d);
         }
 
         if (number.abs() - (curr_n / curr_d)).abs() < PRECISION || z == z.floor() {

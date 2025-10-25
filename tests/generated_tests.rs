@@ -72,13 +72,13 @@ fn convert_json_value<'a>(
                             .unwrap_or_else(|e| panic!("Failed to parse BigInt '{}': {}", val, e));
                         return numfmt_rs::FormatValue::BigInt(bigint);
                     }
-                } else if type_field.as_str() == Some("Date") {
-                    if let Some(serial) = obj.get("serial") {
-                        if let Some(n) = serial.as_f64() {
-                            return numfmt_rs::FormatValue::Number(n);
-                        } else if let Some(i) = serial.as_i64() {
-                            return numfmt_rs::FormatValue::Number(i as f64);
-                        }
+                } else if type_field.as_str() == Some("Date")
+                    && let Some(serial) = obj.get("serial")
+                {
+                    if let Some(n) = serial.as_f64() {
+                        return numfmt_rs::FormatValue::Number(n);
+                    } else if let Some(i) = serial.as_i64() {
+                        return numfmt_rs::FormatValue::Number(i as f64);
                     }
                 }
             }
@@ -130,7 +130,7 @@ fn parse_options(options_json: Option<&JsonValue>) -> FormatterOptions {
                 JsonValue::String(s) => options.locale = s.clone(),
                 JsonValue::Number(n) => {
                     if let Some(code) = n.as_u64() {
-                        options.locale = format!("{:04X}", (code & 0xffff) as u64);
+                        options.locale = format!("{:04X}", { (code & 0xffff) });
                     }
                 }
                 _ => {}
@@ -139,10 +139,11 @@ fn parse_options(options_json: Option<&JsonValue>) -> FormatterOptions {
         if let Some(JsonValue::Array(arr)) = obj.get("grouping") {
             let mut grouping = Vec::new();
             for value in arr {
-                if let Some(num) = value.as_u64() {
-                    if num > 0 && num <= u8::MAX as u64 {
-                        grouping.push(num as u8);
-                    }
+                if let Some(num) = value.as_u64()
+                    && num > 0
+                    && num <= u8::MAX as u64
+                {
+                    grouping.push(num as u8);
                 }
             }
             if !grouping.is_empty() {

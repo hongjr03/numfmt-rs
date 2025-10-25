@@ -370,6 +370,7 @@ fn handle_datetime_token(
     let first = value.chars().next().unwrap_or('y');
     let mut dt = DateToken::new(DateTokenKind::Year, DateUnits::YEAR);
     let mut indeterminate = false;
+    let mut chunk_used = false;
 
     match first {
         'y' => {
@@ -423,6 +424,9 @@ fn handle_datetime_token(
                 dt.unit = DateUnits::MONTH;
                 dt.kind = DateTokenKind::MonthName;
             } else {
+                let has_minute = tokens.iter().any(|tok| {
+                    matches!(tok, SectionToken::Date(prev) if prev.unit.contains(DateUnits::MINUTE))
+                });
                 let last = date_chunks.last_mut();
                 if let Some(last_chunk) = last {
                     let prev_token = &mut tokens[last_chunk.token_index];
@@ -431,6 +435,7 @@ fn handle_datetime_token(
                         && prev_date
                             .unit
                             .intersects(DateUnits::HOUR | DateUnits::SECOND)
+                        && (!prev_date.unit.contains(DateUnits::SECOND) || !has_minute)
                     {
                         last_chunk.used = true;
                         dt.unit = DateUnits::MINUTE;
@@ -449,7 +454,7 @@ fn handle_datetime_token(
         's' => {
             dt.unit = DateUnits::SECOND;
             dt.kind = DateTokenKind::Second;
-            dt.zero_pad = value.len() == 2;
+            dt.zero_pad = value.len() >= 2;
             if let Some(last_chunk) = date_chunks.last_mut() {
                 let prev_token = &mut tokens[last_chunk.token_index];
                 if let SectionToken::Date(prev_date) = prev_token {
@@ -458,9 +463,10 @@ fn handle_datetime_token(
                     } else if last_chunk.indeterminate {
                         prev_date.unit = DateUnits::MINUTE;
                         prev_date.kind = DateTokenKind::Minute;
-                        prev_date.zero_pad = value.len() == 2;
+                        prev_date.zero_pad = value.len() >= 2;
                         last_chunk.indeterminate = false;
                         last_chunk.used = true;
+                        chunk_used = true;
                     }
                 }
             }
@@ -483,7 +489,7 @@ fn handle_datetime_token(
     date_chunks.push(DateChunkState {
         token_index: tokens.len() - 1,
         indeterminate,
-        used: false,
+        used: chunk_used,
     });
     Ok(())
 }
@@ -554,7 +560,9 @@ fn finalize_section(section: &mut Section, have_slash: bool) -> Result<(), Parse
             .filter(|c| c.is_ascii_digit())
             .collect();
         if let Ok(value) = digits.parse::<u32>() {
-            section.denominator = Some(value);
+            if value != 0 {
+                section.denominator = Some(value);
+            }
         }
     }
 
@@ -651,7 +659,7 @@ fn compute_number_padding(section: &mut Section) {
 
 fn pad_lengths(pattern: &str) -> (usize, usize) {
     let max_len = pattern.chars().count();
-    let min_len = pattern.chars().filter(|&c| c != '#').count();
+    let min_len = pattern.chars().filter(|&c| c != '#' && c != '?').count();
     (max_len, min_len)
 }
 

@@ -79,7 +79,7 @@ pub struct Locale {
 impl Locale {
     pub fn bool_true(&self) -> &str {
         self.bool_values
-            .get(0)
+            .first()
             .map(|s| s.as_str())
             .unwrap_or("TRUE")
     }
@@ -159,7 +159,7 @@ fn registry() -> &'static Mutex<LocaleRegistry> {
 }
 
 pub fn get_locale(tag: Option<&str>) -> Option<&'static Locale> {
-    tag.and_then(|t| lookup_locale(t))
+    tag.and_then(lookup_locale)
 }
 
 pub fn get_locale_or_default(tag: Option<&str>) -> &'static Locale {
@@ -205,10 +205,10 @@ impl LocaleRegistry {
             if let Some(loc) = self.locales.get(&code) {
                 return Some(*loc);
             }
-            if let Some(parsed) = parse_locale_tag(&code) {
-                if let Some(loc) = self.locales.get(&parsed.language) {
-                    return Some(*loc);
-                }
+            if let Some(parsed) = parse_locale_tag(&code)
+                && let Some(loc) = self.locales.get(&parsed.language)
+            {
+                return Some(*loc);
             }
         }
         if let Some(parsed) = parse_locale_tag(tag) {
@@ -282,12 +282,12 @@ impl Locale {
                 raw.infinity
             },
             ampm: ensure_pair(raw.ampm, ["AM", "PM"]),
-            mmmm6: ensure_list(raw.mmmm6, 12),
-            mmm6: ensure_list(raw.mmm6, 12),
-            mmmm: ensure_list(raw.mmmm, 12),
-            mmm: ensure_list(raw.mmm, 12),
-            dddd: ensure_list(raw.dddd, 7),
-            ddd: ensure_list(raw.ddd, 7),
+            mmmm6: raw.mmmm6,
+            mmm6: raw.mmm6,
+            mmmm: raw.mmmm,
+            mmm: raw.mmm,
+            dddd: raw.dddd,
+            ddd: raw.ddd,
             bool_values: ensure_pair(raw.bool_values, ["TRUE", "FALSE"]),
             prefer_mdy: raw.prefer_mdy,
         }
@@ -299,14 +299,6 @@ fn ensure_pair(values: Vec<String>, fallback: [&str; 2]) -> Vec<String> {
         0 => vec![fallback[0].to_string(), fallback[1].to_string()],
         1 => vec![values.into_iter().next().unwrap(), fallback[1].to_string()],
         _ => values,
-    }
-}
-
-fn ensure_list(values: Vec<String>, min_len: usize) -> Vec<String> {
-    if values.len() >= min_len {
-        values
-    } else {
-        Vec::from(values)
     }
 }
 
@@ -323,9 +315,7 @@ fn parse_locale_tag(input: &str) -> Option<LocaleId> {
     }
     let head = trimmed.split('@').next().unwrap_or(trimmed);
     let head = head.split('.').next().unwrap_or(head);
-    let mut parts = head
-        .split(|c| c == '-' || c == '_')
-        .filter(|part| !part.is_empty());
+    let mut parts = head.split(['-', '_']).filter(|part| !part.is_empty());
 
     let language = parts.next()?.to_ascii_lowercase();
     if !language.chars().all(|c| c.is_ascii_alphanumeric()) {
@@ -356,12 +346,12 @@ fn resolve_code(tag: &str) -> Option<String> {
     if cleaned.is_empty() {
         return None;
     }
-    if cleaned.chars().all(|c| c.is_ascii_hexdigit()) {
-        if let Ok(value) = u32::from_str_radix(cleaned, 16) {
-            let code = value & 0xffff;
-            if let Some(locale) = code_map().get(&code) {
-                return Some(locale.clone());
-            }
+    if cleaned.chars().all(|c| c.is_ascii_hexdigit())
+        && let Ok(value) = u32::from_str_radix(cleaned, 16)
+    {
+        let code = value & 0xffff;
+        if let Some(locale) = code_map().get(&code) {
+            return Some(locale.clone());
         }
     }
     None

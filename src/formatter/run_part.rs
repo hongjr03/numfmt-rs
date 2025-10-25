@@ -100,72 +100,75 @@ pub fn run_part(
     let mut second = 0i32;
     let mut subsec = 0.0f64;
 
-    if !part.text && part.scale.is_finite() && (part.scale - 1.0).abs() > f64::EPSILON {
-        if let Some(num) = numeric_value {
-            numeric_value = Some(clamp(num * part.scale));
-        }
+    if !part.text
+        && part.scale.is_finite()
+        && (part.scale - 1.0).abs() > f64::EPSILON
+        && let Some(num) = numeric_value
+    {
+        numeric_value = Some(clamp(num * part.scale));
     }
 
-    if part.exponential {
-        if let Some(mut val) = numeric_value {
-            let mut abs_val = val.abs();
-            if abs_val != 0.0 {
-                exponent = get_exponent(abs_val, part.int_max);
-            }
-            if val != 0.0 && !part.integer {
-                exponent += 1;
-            }
-            abs_val = get_significand(abs_val, exponent);
-            if part.int_max == 1 && round(abs_val, part.frac_max) == 10.0 {
-                abs_val = 1.0;
-                exponent += 1;
-            }
-            val = if val < 0.0 { -abs_val } else { abs_val };
-            numeric_value = Some(val);
-            mantissa = exponent.abs().to_string();
+    if part.exponential
+        && let Some(mut val) = numeric_value
+    {
+        let mut abs_val = val.abs();
+        if abs_val != 0.0 {
+            exponent = get_exponent(abs_val, part.int_max);
         }
+        if val != 0.0 && !part.integer {
+            exponent += 1;
+        }
+        abs_val = get_significand(abs_val, exponent);
+        if part.int_max == 1 && round(abs_val, part.frac_max) == 10.0 {
+            abs_val = 1.0;
+            exponent += 1;
+        }
+        val = if val < 0.0 { -abs_val } else { abs_val };
+        numeric_value = Some(val);
+        mantissa = exponent.abs().to_string();
     }
 
-    if part.integer {
-        if let Some(num) = numeric_value {
-            let rounded = round(num, if part.fractions { 1 } else { part.frac_max });
-            let abs_rounded = rounded.abs();
-            if abs_rounded >= 1.0 {
-                integer = abs_rounded.floor().to_string();
-            }
+    if part.integer
+        && let Some(num) = numeric_value
+    {
+        let rounded = round(num, if part.fractions { 1 } else { part.frac_max });
+        let abs_rounded = rounded.abs();
+        if abs_rounded >= 1.0 {
+            integer = abs_rounded.floor().to_string();
         }
     }
 
     let frac_full = part.frac_pattern.join("");
 
-    if part.dec_fractions && part.frac_max > 0 {
-        if let Some(num) = numeric_value {
-            let rounded = round(num, part.frac_max);
-            let repr = rounded.to_string();
-            if let Some(idx) = repr.find('.') {
-                let frac_part = &repr[idx + 1..];
-                fraction = frac_part.to_string();
-                let mut frac_chars: Vec<char> = fraction.chars().collect();
-                let pattern_chars: Vec<char> = frac_full.chars().collect();
-                let mut pattern_idx = pattern_chars.len();
-                let mut digit_idx = frac_chars.len();
-                while pattern_idx > 0 && digit_idx > 0 {
-                    pattern_idx -= 1;
-                    let placeholder = pattern_chars[pattern_idx];
-                    let current_digit = digit_idx - 1;
-                    if (placeholder == '#' || placeholder == '?')
-                        && frac_chars.get(current_digit) == Some(&'0')
-                        && frac_chars.len() > part.frac_min
-                        && current_digit + 1 == frac_chars.len()
-                    {
-                        frac_chars.pop();
-                        digit_idx -= 1;
-                        continue;
-                    }
+    if part.dec_fractions
+        && part.frac_max > 0
+        && let Some(num) = numeric_value
+    {
+        let rounded = round(num, part.frac_max);
+        let repr = rounded.to_string();
+        if let Some(idx) = repr.find('.') {
+            let frac_part = &repr[idx + 1..];
+            fraction = frac_part.to_string();
+            let mut frac_chars: Vec<char> = fraction.chars().collect();
+            let pattern_chars: Vec<char> = frac_full.chars().collect();
+            let mut pattern_idx = pattern_chars.len();
+            let mut digit_idx = frac_chars.len();
+            while pattern_idx > 0 && digit_idx > 0 {
+                pattern_idx -= 1;
+                let placeholder = pattern_chars[pattern_idx];
+                let current_digit = digit_idx - 1;
+                if (placeholder == '#' || placeholder == '?')
+                    && frac_chars.get(current_digit) == Some(&'0')
+                    && frac_chars.len() > part.frac_min
+                    && current_digit + 1 == frac_chars.len()
+                {
+                    frac_chars.pop();
                     digit_idx -= 1;
+                    continue;
                 }
-                fraction = frac_chars.into_iter().collect();
+                digit_idx -= 1;
             }
+            fraction = frac_chars.into_iter().collect();
         }
     }
 
@@ -173,114 +176,114 @@ pub fn run_part(
         part.error.is_none() && (part.num_p.contains('0') || part.den_p.contains('0'));
 
     let mut have_fraction = fixed_slash;
-    if part.fractions {
-        if let Some(num) = numeric_value {
-            have_fraction = fixed_slash || (num % 1.0 != 0.0);
-            let fractional = if part.integer {
-                (num % 1.0).abs()
-            } else {
-                num.abs()
-            };
-            if fractional != 0.0 {
-                have_fraction = true;
-                if let Some(den) = part.denominator {
-                    denominator = den.to_string();
-                    let num_val = round(fractional * den as f64, 0).round() as i64;
-                    numerator = num_val.to_string();
-                    if numerator == "0" {
-                        numerator.clear();
-                        denominator.clear();
-                        have_fraction = fixed_slash;
-                    }
-                } else {
-                    let (num_val, den_val) = dec2frac(fractional, None, Some(part.den_max));
-                    numerator = num_val.to_string();
-                    denominator = den_val.to_string();
-                    if part.integer && numerator == "0" {
-                        numerator.clear();
-                        denominator.clear();
-                        have_fraction = fixed_slash;
-                    }
+    if part.fractions
+        && let Some(num) = numeric_value
+    {
+        have_fraction = fixed_slash || (num % 1.0 != 0.0);
+        let fractional = if part.integer {
+            (num % 1.0).abs()
+        } else {
+            num.abs()
+        };
+        if fractional != 0.0 {
+            have_fraction = true;
+            if let Some(den) = part.denominator {
+                denominator = den.to_string();
+                let num_val = round(fractional * den as f64, 0).round() as i64;
+                numerator = num_val.to_string();
+                if numerator == "0" {
+                    numerator.clear();
+                    denominator.clear();
+                    have_fraction = fixed_slash;
                 }
-            } else if num == 0.0 && !part.integer {
-                have_fraction = true;
-                numerator = "0".to_string();
-                denominator = "1".to_string();
+            } else {
+                let (num_val, den_val) = dec2frac(fractional, None, Some(part.den_max));
+                numerator = num_val.to_string();
+                denominator = den_val.to_string();
+                if part.integer && numerator == "0" {
+                    numerator.clear();
+                    denominator.clear();
+                    have_fraction = fixed_slash;
+                }
             }
-            if part.integer && !have_fraction && num.trunc() == 0.0 {
-                integer = "0".to_string();
-            }
+        } else if num == 0.0 && !part.integer {
+            have_fraction = true;
+            numerator = "0".to_string();
+            denominator = "1".to_string();
+        }
+        if part.integer && !have_fraction && num.trunc() == 0.0 {
+            integer = "0".to_string();
         }
     }
 
-    let group_pri_raw = opts.grouping.get(0).copied().unwrap_or(3);
+    let group_pri_raw = opts.grouping.first().copied().unwrap_or(3);
     let group_sec_raw = opts.grouping.get(1).copied().unwrap_or(group_pri_raw);
     let group_pri = group_pri_raw as usize;
     let group_sec = group_sec_raw as usize;
 
-    if !part.date.is_empty() {
-        if let Some(num) = numeric_value {
-            date = num.trunc();
-            let t = DAYSIZE * (num - date);
-            time = t.floor();
-            subsec = t - time;
-            if subsec.abs() < 1e-6 {
-                subsec = 0.0;
-            } else if subsec > 0.9999 {
-                subsec = 0.0;
+    if !part.date.is_empty()
+        && let Some(num) = numeric_value
+    {
+        date = num.trunc();
+        let t = DAYSIZE * (num - date);
+        time = t.floor();
+        subsec = t - time;
+        if subsec.abs() < 1e-6 {
+            subsec = 0.0;
+        } else if subsec > 0.9999 {
+            subsec = 0.0;
+            time += 1.0;
+            if (time - DAYSIZE).abs() < f64::EPSILON {
+                time = 0.0;
+                date += 1.0;
+            }
+        }
+        if subsec != 0.0 {
+            let has_msec = part.date.contains(DateUnits::MILLISECOND);
+            let has_csec = part.date.contains(DateUnits::CENTISECOND);
+            let has_dsec = part.date.contains(DateUnits::DECISECOND);
+            let should_round = if has_msec {
+                subsec > 0.9995
+            } else if has_csec {
+                subsec > 0.995
+            } else if has_dsec {
+                subsec > 0.95
+            } else {
+                subsec >= 0.5
+            };
+            if should_round {
                 time += 1.0;
-                if (time - DAYSIZE).abs() < f64::EPSILON {
-                    time = 0.0;
-                    date += 1.0;
-                }
+                subsec = 0.0;
             }
-            if subsec != 0.0 {
-                let has_msec = part.date.contains(DateUnits::MILLISECOND);
-                let has_csec = part.date.contains(DateUnits::CENTISECOND);
-                let has_dsec = part.date.contains(DateUnits::DECISECOND);
-                let should_round = if has_msec {
-                    subsec > 0.9995
-                } else if has_csec {
-                    subsec > 0.995
-                } else if has_dsec {
-                    subsec > 0.95
-                } else {
-                    subsec >= 0.5
-                };
-                if should_round {
-                    time += 1.0;
-                    subsec = 0.0;
-                }
-            }
-            if date != 0.0 || part.date_system != 0 {
-                let dt = date_from_serial(num, part.date_system, opts.leap_1900);
-                year = dt[0];
-                month = dt[1] as u8;
-                day = dt[2];
-            }
-            if time != 0.0 {
-                let x = if time < 0.0 { DAYSIZE + time } else { time };
-                second = (x as i64 % 60) as i32;
-                minute = ((x as i64 / 60) % 60) as i32;
-                hour = (((x as i64 / 60) / 60) % 60) as i32;
-            }
-            weekday = ((6.0 + date).rem_euclid(7.0)) as usize;
+        }
+        if date != 0.0 || part.date_system != 0 {
+            let dt = date_from_serial(num, part.date_system, opts.leap_1900);
+            year = dt[0];
+            month = dt[1] as u8;
+            day = dt[2];
+        }
+        if time != 0.0 {
+            let x = if time < 0.0 { DAYSIZE + time } else { time };
+            second = (x as i64 % 60) as i32;
+            minute = ((x as i64 / 60) % 60) as i32;
+            hour = (((x as i64 / 60) / 60) % 60) as i32;
+        }
+        weekday = ((6.0 + date).rem_euclid(7.0)) as usize;
 
-            let overflow_val = date + (time / DAYSIZE);
-            if date_overflows(num, overflow_val, opts.date_span_large) {
-                if opts.date_error_throws {
-                    return Err(FormatterError::DateOutOfBounds);
-                }
-                if opts.date_error_number {
-                    let mut buffer = String::new();
-                    if num < 0.0 {
-                        buffer.push_str(&locale.negative);
-                    }
-                    format_general(&mut buffer, num, part, locale);
-                    return Ok(buffer);
-                }
-                return Ok(opts.overflow.clone());
+        let overflow_val = date + (time / DAYSIZE);
+        if date_overflows(num, overflow_val, opts.date_span_large) {
+            if opts.date_error_throws {
+                return Err(FormatterError::DateOutOfBounds);
             }
+            if opts.date_error_number {
+                let mut buffer = String::new();
+                if num < 0.0 {
+                    buffer.push_str(&locale.negative);
+                }
+                format_general(&mut buffer, num, part, locale);
+                return Ok(buffer);
+            }
+            return Ok(opts.overflow.clone());
         }
     }
 
@@ -306,11 +309,11 @@ pub fn run_part(
     let numerator_chars: Vec<char> = numerator.chars().collect();
     let denominator_chars: Vec<char> = denominator.chars().collect();
 
-    let negative_value = numeric_value.map_or(false, |n| n.is_sign_negative());
+    let negative_value = numeric_value.is_some_and(|n| n.is_sign_negative());
     let has_integer_digit = integer_chars.iter().any(|c| *c != '0');
     let has_fraction_digit = fraction_chars.iter().any(|c| *c != '0');
     let has_numerator_digit = numerator_chars.iter().any(|c| *c != '0')
-        || (part.fractions && numeric_value.map_or(false, |n| n != 0.0));
+        || (part.fractions && numeric_value.is_some_and(|n| n != 0.0));
     let uses_general = part.tokens.iter().any(|tok| {
         matches!(
             tok,
@@ -381,7 +384,7 @@ pub fn run_part(
                 TokenKind::Minus => {
                     if tok.volatile && !part.date.is_empty() {
                         // no-op
-                    } else if tok.volatile && numeric_value.map_or(true, |n| n >= 0.0) {
+                    } else if tok.volatile && numeric_value.is_none_or(|n| n >= 0.0) {
                         // skip volatile minus for non-negative numeric values or non-numeric inputs
                     } else if tok.volatile
                         && !part.fractions
@@ -498,17 +501,16 @@ pub fn run_part(
                             };
 
                             let mut separator = String::new();
-                            if part.grouping {
-                                if let Some(base) = i.checked_sub(1) {
-                                    if base >= group_pri {
-                                        let n = base - group_pri;
-                                        if group_sec > 0 && n % group_sec == 0 {
-                                            if digit.is_some() || placeholder == Some('0') {
-                                                separator.push_str(&locale.group);
-                                            } else if placeholder == Some('?') {
-                                                separator.push_str(pad('?', opts.nbsp));
-                                            }
-                                        }
+                            if part.grouping
+                                && let Some(base) = i.checked_sub(1)
+                                && base >= group_pri
+                            {
+                                let n = base - group_pri;
+                                if group_sec > 0 && n % group_sec == 0 {
+                                    if digit.is_some() || placeholder == Some('0') {
+                                        separator.push_str(&locale.group);
+                                    } else if placeholder == Some('?') {
+                                        separator.push_str(pad('?', opts.nbsp));
                                     }
                                 }
                             }
@@ -622,13 +624,13 @@ fn space_adjacent_to_fraction(tokens: &[SectionToken], idx: usize) -> bool {
     let prev = tokens
         .get(..idx)
         .and_then(|slice| slice.iter().rfind(|tok| !token_is_space(tok)));
-    if prev.map_or(false, is_fraction_component) {
+    if prev.is_some_and(is_fraction_component) {
         return true;
     }
     let next = tokens
         .get(idx + 1..)
         .and_then(|slice| slice.iter().find(|tok| !token_is_space(tok)));
-    next.map_or(false, is_fraction_component)
+    next.is_some_and(is_fraction_component)
 }
 
 fn token_is_space(token: &SectionToken) -> bool {
@@ -684,11 +686,11 @@ fn append_digit_sequence(
 
     for i in 0..length {
         let idx = local_offset + i as isize;
-        if idx >= 0 {
-            if let Some(ch) = digits.get(idx as usize) {
-                output.push(*ch);
-                continue;
-            }
+        if idx >= 0
+            && let Some(ch) = digits.get(idx as usize)
+        {
+            output.push(*ch);
+            continue;
         }
         let placeholder = chunk_chars.get(i).copied().unwrap_or('#');
         output.push_str(pad(placeholder, nbsp));
@@ -732,6 +734,7 @@ fn append_fraction_denominator(
     chunk_len
 }
 
+#[allow(clippy::too_many_arguments)]
 fn append_date_token(
     output: &mut String,
     token: &DateToken,

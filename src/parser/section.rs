@@ -559,10 +559,10 @@ fn finalize_section(section: &mut Section, have_slash: bool) -> Result<(), Parse
             .chars()
             .filter(|c| c.is_ascii_digit())
             .collect();
-        if let Ok(value) = digits.parse::<u32>() {
-            if value != 0 {
-                section.denominator = Some(value);
-            }
+        if let Ok(value) = digits.parse::<u32>()
+            && value != 0
+        {
+            section.denominator = Some(value);
         }
     }
 

@@ -15,7 +15,7 @@ fn to_ymd_1900(ord: i32, leap1900: bool) -> [i32; 3] {
 
     let mut l = ord as i64 + 68_569 + 2_415_019;
     let n = (4 * l) / 146_097;
-    l = l - ((146_097 * n + 3) / 4);
+    l -= (146_097 * n + 3) / 4;
     let i = (4_000 * (l + 1)) / 1_461_001;
     l = l - ((1_461 * i) / 4) + 31;
     let j = (80 * l) / 2_447;
@@ -46,9 +46,9 @@ fn to_ymd_1317(ord: i32) -> [i32; 3] {
     let shift1 = 8.01 / 60.0;
     let mut z = ord as f64 + 466_935.0;
     let cyc = (z / 10_631.0).floor();
-    z = z - 10_631.0 * cyc;
+    z -= 10_631.0 * cyc;
     let j = ((z - shift1) / y).floor();
-    z = z - (j * y + shift1).floor();
+    z -= (j * y + shift1).floor();
     let m = ((z + 28.5001) / 29.5).floor();
     if (m as i32) == 13 {
         return [30 * cyc as i32 + j as i32, 12, 30];

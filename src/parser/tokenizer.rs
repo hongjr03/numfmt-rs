@@ -28,7 +28,7 @@ pub fn tokenize(pattern: &str) -> Result<Vec<Token>, ParseError> {
             let mut maybe_scale = false;
 
             // Check what comes before
-            if prev_char.map_or(false, is_num_op_char) {
+            if prev_char.is_some_and(is_num_op_char) {
                 maybe_group = true;
                 maybe_scale = true;
             } else if prev_char == Some('.') {
@@ -39,7 +39,7 @@ pub fn tokenize(pattern: &str) -> Result<Vec<Token>, ParseError> {
             if maybe_group && (look_ahead.is_none() || look_ahead == Some(';')) {
                 maybe_group = false;
             }
-            if maybe_scale && look_ahead.map_or(false, is_num_op_char) {
+            if maybe_scale && look_ahead.is_some_and(is_num_op_char) {
                 maybe_scale = false;
             }
 

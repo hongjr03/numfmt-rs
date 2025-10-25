@@ -131,7 +131,7 @@ fn prepare_pattern(pattern: &str, should_throw: bool) -> Result<Arc<Pattern>, Fo
 }
 
 fn resolve_locale_tag<'a>(pattern: &'a Pattern, opts: &'a FormatterOptions) -> Option<&'a str> {
-    pattern.locale.as_deref().or_else(|| {
+    pattern.locale.as_deref().or({
         if opts.locale.is_empty() {
             None
         } else {
@@ -140,7 +140,7 @@ fn resolve_locale_tag<'a>(pattern: &'a Pattern, opts: &'a FormatterOptions) -> O
     })
 }
 
-fn get_part<'a>(value: f64, parts: &'a [Section]) -> Option<&'a Section> {
+fn get_part(value: f64, parts: &[Section]) -> Option<&Section> {
     for part in parts.iter().take(3) {
         if let Some(cond) = &part.condition {
             let operand = cond.operand;

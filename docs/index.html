@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECMA-376 Number Format</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background: #fafafa;
+        min-height: 100vh;
+        padding: 40px 20px;
+        color: #333;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1400px;
+        }
+
+        .main-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: start;
+        }
+
+        .section-divider {
+          display: none;
+        }
+      }
+
+      header {
+        margin-bottom: 60px;
+      }
+
+      h1 {
+        font-size: 2em;
+        font-weight: 300;
+        margin-bottom: 10px;
+        color: #1a1a1a;
+      }
+
+      .subtitle {
+        color: #666;
+        font-size: 0.95em;
+      }
+
+      .subtitle a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+
+      .subtitle a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        margin-bottom: 50px;
+      }
+
+      .input-group {
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #666;
+        font-size: 0.9em;
+      }
+
+      select {
+        padding: 6px 10px;
+        border: 1px solid #e1e4e8;
+        border-radius: 4px;
+        font-size: 13px;
+        font-family: inherit;
+        background: white;
+        color: #666;
+        cursor: pointer;
+        transition: border-color 0.2s;
+        width: auto;
+        display: inline-block;
+      }
+
+      select:focus {
+        outline: none;
+        border-color: #0366d6;
+      }
+
+      .value-type-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .value-type-wrapper label {
+        flex: 0 0 auto;
+        margin: 0;
+      }
+
+      .value-type-wrapper .value-input-wrapper {
+        flex: 1;
+        margin: 0;
+      }
+
+      .value-type-wrapper select {
+        flex: 0 0 auto;
+      }
+
+      .value-input-wrapper {
+        position: relative;
+        margin-bottom: 12px;
+      }
+
+      input.value-input {
+        border: none !important;
+        padding: 0 !important;
+        font-family: "Monaco", "Menlo", "Courier New", monospace;
+        font-size: 32px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        color: #1a1a1a;
+        background: transparent;
+        width: 100%;
+      }
+
+      input.value-input:focus {
+        outline: none;
+        border: none !important;
+      }
+
+      input.value-input::placeholder {
+        color: #ccc;
+      }
+
+      input.value-input:disabled {
+        color: #ccc;
+      }
+
+      .pattern-input-wrapper {
+        position: relative;
+        margin-bottom: 12px;
+      }
+
+      input.pattern-input {
+        border: none !important;
+        padding: 0 !important;
+        font-family: "Monaco", "Menlo", "Courier New", monospace;
+        font-size: 32px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        color: #1a1a1a;
+        background: transparent;
+        width: 100%;
+      }
+
+      input.pattern-input:focus {
+        outline: none;
+        border: none !important;
+      }
+
+      input.pattern-input::placeholder {
+        color: #ccc;
+      }
+
+      .parse-section {
+        margin-bottom: 16px;
+      }
+
+      .section-label {
+        font-size: 0.75em;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+      }
+
+      .tokens-line {
+        display: block;
+      }
+
+      .result {
+        margin-top: 30px;
+        padding: 20px;
+        background: white;
+        border: 1px solid #e1e4e8;
+        border-radius: 4px;
+        min-height: 60px;
+      }
+
+      .result.empty {
+        color: #999;
+      }
+
+      .result-value {
+        font-size: 1.8em;
+        font-weight: 300;
+        margin-bottom: 15px;
+        color: #1a1a1a;
+      }
+
+      .result-meta {
+        font-size: 0.85em;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .error {
+        color: #d73a49;
+      }
+
+      .token {
+        display: inline-block;
+        padding: 4px 10px;
+        margin: 4px;
+        background: #f6f8fa;
+        border: 1px solid #e1e4e8;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: "Monaco", "Menlo", "Courier New", monospace;
+        transition: all 0.2s;
+      }
+
+      .token:hover {
+        background: #fff;
+        border-color: #0366d6;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .token-kind {
+        color: #0366d6;
+        margin-right: 6px;
+        font-weight: 500;
+      }
+
+      .section-divider {
+        border: none;
+        border-top: 1px solid #e1e4e8;
+        margin: 40px 0;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 16px;
+        }
+
+        header {
+          margin-bottom: 40px;
+        }
+
+        section {
+          margin-bottom: 40px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 16px 12px;
+        }
+
+        header {
+          margin-bottom: 30px;
+        }
+
+        section {
+          margin-bottom: 30px;
+        }
+
+        .section-divider {
+          margin: 30px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ECMA-376 Number Format</h1>
+        <p class="subtitle">
+          Parser and formatter powered by
+          <a href="https://www.npmjs.com/package/numfmt-rs" target="_blank"
+            >numfmt-rs</a
+          >
+        </p>
+      </header>
+
+      <div class="main-content">
+        <section>
+          <div class="input-group">
+            <label for="pattern">Format Pattern</label>
+            <div class="pattern-input-wrapper">
+              <input
+                type="text"
+                id="pattern"
+                class="pattern-input"
+                placeholder="#,##0.00"
+                value="#,##0.00"
+              />
+            </div>
+          </div>
+
+          <div id="parseResult" class="result empty">
+            Enter a format pattern to parse
+          </div>
+        </section>
+
+        <hr class="section-divider" />
+
+        <section>
+          <div class="input-group">
+            <label for="value" id="valueLabel">Value</label>
+            <div class="value-type-wrapper">
+              <div class="value-input-wrapper">
+                <input
+                  type="text"
+                  id="value"
+                  class="value-input"
+                  placeholder="1234.56"
+                  value="1234.56"
+                />
+              </div>
+              <select id="valueType" onchange="updateValueInput()">
+                <option value="number">Number</option>
+                <option value="text">Text</option>
+                <option value="boolean">Boolean</option>
+                <option value="null">Null</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="formatResult" class="result empty">
+            Enter a value to format
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script type="module">
+      import init, {
+        parse_format,
+        format_number,
+        format_text,
+        format_boolean,
+        format_null,
+      } from "https://cdn.jsdelivr.net/npm/numfmt-rs@latest/numfmt_rs.js";
+
+      let wasmInitialized = false;
+
+      function escapeHtml(text) {
+        if (!text) return "";
+        const map = {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;",
+        };
+        return text.toString().replace(/[&<>"']/g, (m) => map[m]);
+      }
+
+      async function initWasm() {
+        if (!wasmInitialized) {
+          try {
+            await init();
+            wasmInitialized = true;
+          } catch (error) {
+            console.error("WASM initialization failed:", error);
+          }
+        }
+      }
+
+      window.updateValueInput = function () {
+        const type = document.getElementById("valueType").value;
+        const valueInput = document.getElementById("value");
+        const valueLabel = document.getElementById("valueLabel");
+
+        switch (type) {
+          case "number":
+            valueLabel.textContent = "Value";
+            valueInput.placeholder = "1234.56";
+            valueInput.value = "1234.56";
+            valueInput.disabled = false;
+            break;
+          case "text":
+            valueLabel.textContent = "Value";
+            valueInput.placeholder = "Hello";
+            valueInput.value = "Hello";
+            valueInput.disabled = false;
+            break;
+          case "boolean":
+            valueLabel.textContent = "Value";
+            valueInput.placeholder = "true";
+            valueInput.value = "true";
+            valueInput.disabled = false;
+            break;
+          case "null":
+            valueLabel.textContent = "Value";
+            valueInput.value = "";
+            valueInput.disabled = true;
+            break;
+        }
+      };
+
+      window.setPattern = function (pattern) {
+        document.getElementById("pattern").value = pattern;
+        patternInput.dispatchEvent(new Event("input"));
+      };
+
+      const patternInput = document.getElementById("pattern");
+      const parseResult = document.getElementById("parseResult");
+      
+      patternInput.addEventListener("input", async () => {
+        await initWasm();
+        if (!wasmInitialized) return;
+
+        const pattern = patternInput.value.trim();
+        if (!pattern) {
+          parseResult.innerHTML = '<div class="empty">Enter a format pattern to parse</div>';
+          parseResult.className = "result empty";
+          return;
+        }
+
+        try {
+          const result = parse_format(pattern);
+          parseResult.className = "result";
+
+          if (result.success) {
+            let html = "";
+            
+            result.sections.forEach((section, sectionIndex) => {
+              html += '<div class="parse-section">';
+              html += `<div class="section-label">Section ${sectionIndex + 1}</div>`;
+              html += '<div class="tokens-line">';
+              
+              section.tokens.forEach((token) => {
+                html += `<span class="token">`;
+                html += `<span class="token-kind">${escapeHtml(token.kind)}</span>`;
+                if (token.value) {
+                  html += escapeHtml(token.value);
+                }
+                html += `</span>`;
+              });
+              html += '</div></div>';
+            });
+            parseResult.innerHTML = html;
+          } else {
+            parseResult.innerHTML = `<div class="error">${escapeHtml(result.error)}</div>`;
+          }
+        } catch (error) {
+          parseResult.innerHTML = `<div class="error">${escapeHtml(error.message)}</div>`;
+        }
+      });
+
+      const valueInput = document.getElementById("value");
+      const valueType = document.getElementById("valueType");
+      const formatResult = document.getElementById("formatResult");
+
+      async function updateFormat() {
+        await initWasm();
+        if (!wasmInitialized) return;
+
+        const pattern = patternInput.value.trim();
+        const type = valueType.value;
+        const value = valueInput.value;
+
+        if (!pattern) {
+          formatResult.innerHTML = '<div class="empty">Enter a format pattern first</div>';
+          formatResult.className = "result empty";
+          return;
+        }
+
+        try {
+          let result;
+
+          switch (type) {
+            case "number":
+              const num = parseFloat(value);
+              if (isNaN(num)) {
+                formatResult.innerHTML = '<div class="error">Invalid number</div>';
+                formatResult.className = "result";
+                return;
+              }
+              result = format_number(pattern, num);
+              break;
+            case "text":
+              result = format_text(pattern, value);
+              break;
+            case "boolean":
+              const bool = value.toLowerCase() === "true";
+              result = format_boolean(pattern, bool);
+              break;
+            case "null":
+              result = format_null(pattern);
+              break;
+          }
+
+          formatResult.className = "result";
+          if (result.success) {
+            let html = `<div class="result-value">${escapeHtml(result.result)}</div>`;
+            html += '<div class="result-meta">';
+            html += `Pattern: ${escapeHtml(pattern)}<br>`;
+            html += `Input: ${escapeHtml(value)} (${type})`;
+            if (result.color) {
+              html += `<br>Color: ${escapeHtml(result.color)}`;
+            }
+            html += '</div>';
+            formatResult.innerHTML = html;
+          } else {
+            formatResult.innerHTML = `<div class="error">${escapeHtml(result.error)}</div>`;
+          }
+        } catch (error) {
+          formatResult.innerHTML = `<div class="error">${escapeHtml(error.message)}</div>`;
+          formatResult.className = "result";
+        }
+      }
+
+      valueInput.addEventListener("input", updateFormat);
+      valueType.addEventListener("change", updateFormat);
+      patternInput.addEventListener("input", updateFormat);
+
+      initWasm().then(() => {
+        patternInput.dispatchEvent(new Event("input"));
+        updateFormat();
+      });
+    </script>
+  </body>
+</html>

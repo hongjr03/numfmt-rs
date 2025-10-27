@@ -684,6 +684,7 @@ dependencies = [
  "serde-wasm-bindgen",
  "serde_json",
  "thiserror 2.0.17",
+ "typst-wasm-protocol",
  "wasm-bindgen",
  "winnow",
 ]
@@ -1062,6 +1063,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "typst-wasm-macros"
+version = "0.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0df89cf4e273dca9ca1a971f86d5bc12f7ec79d008fbc11037dbc8f821196316"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+ "venial",
+]
+
+[[package]]
+name = "typst-wasm-protocol"
+version = "0.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1e74aabca9c7bb93eb529915add290b6cc11231f3fb36f2c6080007a658699df"
+dependencies = [
+ "typst-wasm-macros",
+]
+
+[[package]]
 name = "unicode-ident"
 version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1141,6 +1163,16 @@ name = "utf8parse"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
+
+[[package]]
+name = "venial"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9a42528baceab6c7784446df2a10f4185078c39bf73dc614f154353f1a6b1229"
+dependencies = [
+ "proc-macro2",
+ "quote",
+]
 
 [[package]]
 name = "version_check"

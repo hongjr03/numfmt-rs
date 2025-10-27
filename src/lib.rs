@@ -2,8 +2,11 @@ pub mod constants;
 pub mod formatter;
 pub mod parser;
 
-#[cfg(target_arch = "wasm32")]
+#[cfg(feature = "wasm")]
 pub mod wasm;
+
+#[cfg(feature = "typst-plugin")]
+pub mod typst_plugin;
 
 pub use formatter::{
     ColorValue, DateValue, FormatValue, FormatterError, FormatterOptions, LocaleSettings,
